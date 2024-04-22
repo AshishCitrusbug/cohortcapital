@@ -1,0 +1,49 @@
+.elementor-145 .elementor-element.elementor-element-ff4463a{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--gap:0px 0px;--background-transition:0.3s;}.elementor-145 .elementor-element.elementor-element-c6ae557{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--background-transition:0.3s;}.elementor-145 .elementor-element.elementor-element-dd9744c{text-align:left;}.elementor-145 .elementor-element.elementor-element-dd9744c img{width:81%;height:63px;}.elementor-145 .elementor-element.elementor-element-4ef30ce{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--background-transition:0.3s;}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-15796e1.elementor-social-icon{background-color:#FFFFFF;}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-15796e1.elementor-social-icon i{color:var( --e-global-color-primary );}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-15796e1.elementor-social-icon svg{fill:var( --e-global-color-primary );}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-2e2f6cb.elementor-social-icon{background-color:#FFFFFF;}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-2e2f6cb.elementor-social-icon i{color:var( --e-global-color-primary );}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-2e2f6cb.elementor-social-icon svg{fill:var( --e-global-color-primary );}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-b5d2a51.elementor-social-icon{background-color:#FFFFFF;}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-b5d2a51.elementor-social-icon i{color:var( --e-global-color-primary );}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-repeater-item-b5d2a51.elementor-social-icon svg{fill:var( --e-global-color-primary );}.elementor-145 .elementor-element.elementor-element-6592598{--grid-template-columns:repeat(0, auto);--icon-size:25px;--grid-column-gap:0px;--grid-row-gap:0px;width:100%;max-width:100%;}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-widget-container{text-align:right;}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-social-icon{--icon-padding:10px;}.elementor-145 .elementor-element.elementor-element-6592598 .elementor-icon{border-radius:0px 0px 0px 0px;}.elementor-145 .elementor-element.elementor-element-6592598 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-145 .elementor-element.elementor-element-6592598.elementor-element{--align-self:center;}.elementor-145 .elementor-element.elementor-element-7d8fa29{color:var( --e-global-color-primary );font-family:"New Atten Round", Sans-serif;font-size:16px;font-weight:400;font-style:normal;line-height:20px;letter-spacing:0px;word-spacing:0px;}.elementor-145 .elementor-element.elementor-element-7d8fa29 > .elementor-widget-container{margin:29px 0px 0px 0px;}@media(min-width:768px){.elementor-145 .elementor-element.elementor-element-ff4463a{--content-width:1475px;}.elementor-145 .elementor-element.elementor-element-c6ae557{--width:33.3333%;}.elementor-145 .elementor-element.elementor-element-4ef30ce{--width:66.6666%;}}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'New Atten Round';
+	font-style: normal;
+	font-weight: 400;
+	font-display: auto;
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Regular.eot');
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Regular.eot?#iefix') format('embedded-opentype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Regular.woff2') format('woff2'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Regular.woff') format('woff'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Regular.ttf') format('truetype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Regular.svg#NewAttenRound') format('svg');
+}
+@font-face {
+	font-family: 'New Atten Round';
+	font-style: normal;
+	font-weight: 500;
+	font-display: auto;
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Medium.eot');
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Medium.eot?#iefix') format('embedded-opentype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Medium.woff2') format('woff2'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Medium.woff') format('woff'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Medium.ttf') format('truetype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Medium.svg#NewAttenRound') format('svg');
+}
+@font-face {
+	font-family: 'New Atten Round';
+	font-style: normal;
+	font-weight: 700;
+	font-display: auto;
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Bold.eot');
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Bold.eot?#iefix') format('embedded-opentype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Bold.woff2') format('woff2'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Bold.woff') format('woff'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Bold.ttf') format('truetype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-Bold.svg#NewAttenRound') format('svg');
+}
+@font-face {
+	font-family: 'New Atten Round';
+	font-style: normal;
+	font-weight: 900;
+	font-display: auto;
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-ExtraBold.eot');
+	src: url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-ExtraBold.woff2') format('woff2'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-ExtraBold.woff') format('woff'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-ExtraBold.ttf') format('truetype'),
+		url('https://cohort.demoproject.info/wp-content/uploads/2024/04/AttenRoundNew-ExtraBold.svg#NewAttenRound') format('svg');
+}
+/* End Custom Fonts CSS */
