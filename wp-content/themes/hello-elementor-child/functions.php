@@ -34,4 +34,7 @@ function hello_elementor_child_scripts_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
+
 add_filter('use_block_editor_for_post', '__return_false');
+
+include get_stylesheet_directory() . '/inc/custom-shortcode.php';
