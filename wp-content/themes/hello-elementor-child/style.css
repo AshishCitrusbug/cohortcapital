@@ -13,3 +13,360 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 */
 
 /* Add your custom styles here */
+
+header.elementor.elementor-location-header .header-main.header-sticky {
+  background: #fff;
+}
+header.elementor.elementor-location-header .header-main.header-main__bg-blue.header-sticky {
+  background: #252a6b;
+  box-shadow: 0 0px 2px 0px #fff;
+}
+
+.team__main {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.team__main--inner {
+  max-width: calc(100% / 4);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 8px;
+  margin: 12px 0;
+}
+.team__main--inner-title {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: #656565;
+  padding: 30px;
+  border-radius: 10px;
+}
+.team__main--inner-title h2 {
+  margin: 0;
+  color: #fff;
+}
+.team__main--inner-title p {
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+  font-family: "New Atten Round";
+  line-height: 19px;
+  font-weight: 400;
+}
+.team__main--inner-author h4 {
+  color: #252A6B;
+  margin: 0 0 5px;
+}
+.team__main--inner-author {
+  padding: 30px 14px 0;
+}
+.team__main--inner-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.team__main--inner-author h4 {
+  margin: 0 0 5px;
+  color: #252A6B;
+}
+.team__main--inner-author p {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #252A6B;
+}
+.team__main--inner-main {
+  position: relative;
+}
+.team__main--inner-over {
+  position: absolute;
+  top: 0;
+  padding: 30px;
+  width: 100%;
+  background: #FF63AE;
+  border-radius: 10px;
+  transition: all 500ms linear;
+  opacity: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.team__main--inner-main:hover .team__main--inner-over {
+  transition: 500ms linear;
+  opacity: 1;
+}
+.team__main--inner-over--cont p {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 20px;
+}
+.team__main--inner-over--cont p:last-child {
+  margin: 0;
+}
+.team__main--inner-over--author h3 {
+  margin: 0 0 5px;
+}
+.team__main--inner-over--author p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+.get-in-touch__form form .get-in-touch__form--main {
+  display:flex;
+}
+.get-in-touch__form form .get-in-touch__form--main span {
+  max-width: calc(100% / 2);
+  width: 100%;
+  margin:0 6px;
+}
+.get-in-touch__form form .get-in-touch__form--main span:first-child {
+  margin-left: 0;
+}
+.get-in-touch__form form .get-in-touch__form--main span:last-child {
+  margin-right: 0;
+}
+.get-in-touch__form form .get-in-touch__form--main span input {
+  border: 0;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  border-radius: 0;
+  color: #fff;
+}
+.get-in-touch__form form .get-in-touch__form--main span input::placeholder {
+  color: #fff;
+}
+.get-in-touch__form form span input,
+.get-in-touch__form form span select,
+.get-in-touch__form form span textarea {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  margin: 0 0 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+}
+.get-in-touch__form form span input::placeholder,
+.get-in-touch__form form span textarea::placeholder {
+  color: #fff;
+}
+.get-in-touch__form form span input:focus,
+.get-in-touch__form form span select:focus,
+.get-in-touch__form form span textarea:focus {
+  outline: none;
+}
+.get-in-touch__form form span input[type=email] {
+  border-color: #fff;
+}
+.get-in-touch__form form span .wpcf7-not-valid-tip {
+  max-width: 100%;
+}
+.get-in-touch__form form span select option {
+  color: #000;
+}
+.get-in-touch__form form input[type="submit"] {
+  display: block;
+  margin: 0 0 0 auto;
+  color: #fff;
+  border-color: #fff;
+}
+.get-in-touch__form form span.wpcf7-spinner {
+  position: absolute;
+  bottom: 20px;
+}
+.get-in-touch__form form input[type="submit"]:hover,
+.get-in-touch__form form input[type="submit"]:focus {
+  background: #fff;
+  color: #252a6b;
+}
+.get-in-touch__form form input[type="submit"]:focus {
+  outline: none;
+}
+.get-in-touch__form form.invalid .wpcf7-response-output {
+  border-color: #fff;
+  color: #fff;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 20px 0 0;
+}
+.loan-enquiry__form {
+  margin: 0 0 115px;
+}
+.loan-enquiry__form form .loan-enquiry__form--main {
+  margin: 0 0 25px;
+}
+.loan-enquiry__form form .loan-enquiry__form--main label {
+  margin: 0 0 6px 11px;
+  color: #F1EFEF;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.loan-enquiry__form form .loan-enquiry__form--main span input,
+.loan-enquiry__form form .loan-enquiry__form--main span textarea {
+  background: #6F75CB80;
+  border-color: #6F75CB80;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 20px;
+  font-weight: 400;
+}
+.loan-enquiry__form form .loan-enquiry__form--main span input::placeholder,
+.loan-enquiry__form form .loan-enquiry__form--main span textarea::placeholder {
+  color: #918DC4; 
+}
+.loan-enquiry__form form .loan-enquiry__form--main span input:focus,
+.loan-enquiry__form form .loan-enquiry__form--main span textarea:focus {
+  outline: none;
+}
+.loan-enquiry__form form .loan-enquiry__form--main span + span {
+  color: #fff;
+  margin: 10px 0 0 11px;
+  display: block;
+}
+.loan-enquiry__form form .loan-enquiry__form--main span input[type=date] {
+  color: #fff;
+}
+.loan-enquiry__form form .loan-enquiry__form--main span input::placeholder {
+  color: #918DC4;
+}
+.loan-enquiry__form form .loan-enquiry__form--main span input[type=date]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 1;
+}
+.loan-enquiry__form form input[type=submit] {
+  margin: 120px auto 0;
+  display: block;
+  background: #FF63AE;
+  color: #fff;
+  border-color: #FF63AE;
+}
+.loan-enquiry__form form input[type=submit]:hover {
+  background: transparent;
+}
+.loan-enquiry__form form input[type=submit]:focus {
+  outline: none;
+}
+.loan-enquiry__form form.invalid .wpcf7-response-output {
+  border-color: #FF63AE;
+  color: #fff;
+  padding: 10px 5px;
+  text-align: center;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main label {
+  margin: 0;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main {
+  margin: 0 0 25px 34px;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button .wpcf7-list-item {
+  margin: 0 0 8px;
+  display: block;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button .wpcf7-list-item:last-child {
+  margin: 0;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button .wpcf7-list-item input[type=radio] {
+  height: 20px;
+  width: 20px;
+  margin-right: 6px;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button .wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .main-label {
+  margin: 0 0 19px;
+}
+.footer__bottom-menu .elementor-widget-container a {
+  margin: 0 18px;
+}
+
+
+
+
+@media (min-width: 1200px) {
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header-main .header-btn {
+    display: none;
+  }
+  .team__main--inner {
+    max-width: calc(100% / 3);
+  }
+  .loan-enquiry__form {
+    margin: 0 0 95px;
+  }
+  .loan-enquiry__form form input[type=submit] {
+    margin: 100px auto 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .team__main--inner {
+    max-width: calc(100% / 2);
+  }
+  .loan-enquiry__form {
+    margin: 0 0 75px;
+  }
+  .loan-enquiry__form form input[type=submit] {
+    margin: 80px auto 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__bottom-menu .elementor-widget-container a {
+    max-width: 50%;
+    width: 100%;
+    display: block;
+  }
+  .footer__bottom-menu .elementor-widget-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .team__main--inner-over {
+    position: relative;
+    opacity: 1;
+    height: fit-content;
+    min-height: 370px;
+  }
+  .loan-enquiry__form {
+    margin: 0 0 55px;
+  }
+  .loan-enquiry__form form input[type=submit] {
+    margin: 60px auto 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .team__main--inner {
+    max-width: 100%;
+  }
+  .team__main--inner-over {
+    min-height: auto;
+  }
+  .team__main--inner-over--author {
+    margin-top: 20px;
+  }
+  
+}
