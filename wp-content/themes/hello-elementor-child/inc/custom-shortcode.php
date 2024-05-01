@@ -52,3 +52,55 @@ function team_member_shortcode() {
 
 }
 add_shortcode( 'team_member', 'team_member_shortcode' );
+function transactions_field_loop()
+{
+    $args = array(
+        'post_type'      => 'transaction',
+        'posts_per_page' => -1,
+    );
+
+    $query = new WP_Query($args);
+
+    ob_start();
+    
+    if ($query->have_posts()) {
+        $loan             = get_field('loan');
+        $term_outstanding = get_field('term_outstanding');
+        $ltv              = get_field('ltv'); ?>
+    
+      <div class="transactions">
+        <div class="transactions__main">
+          <div class="transactions__title">
+            <h4><?php the_title(); ?></h4>
+          </div>
+          <div class="transactions__main--cont">
+              <?php if (!empty($loan)) { ?>
+                  <div class="transactions__main--cont-data">
+                      <span class="transactions__main--cont-data--title">Loan:</span>
+                      <span class="transactions__main--cont-data--value"><?php echo $loan; ?></span>
+                  </div>
+              <?php }; ?>
+              <?php if (!empty($term_outstanding)) { ?>
+                  <div class="transactions__main--cont-data">
+                      <span class="transactions__main--cont-data--title">Term outstanding:</span>
+                      <span class="transactions__main--cont-data--value"><?php echo $term_outstanding; ?></span>
+                  </div>
+              <?php } ?>
+              <?php if (!empty($ltv)) { ?>
+                  <div class="transactions__main--cont-data">
+                      <span class="transactions__main--cont-data--title">LTV:</span>
+                      <span class="transactions__main--cont-data--value"><?php echo $ltv; ?></span>
+                  </div>
+              <?php } ?>
+          </div>
+        </div>
+        <div class="transactions__main--arrow">
+          <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/trans-arrow.svg'); ?>" alt="trans-arrow">
+        </div>
+      </div>
+
+      <?php wp_reset_postdata();
+    }
+    return ob_get_clean();
+}
+add_shortcode('transactions_details', 'transactions_field_loop');

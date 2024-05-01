@@ -1,0 +1,210 @@
+0000.001 (0) Opened log file at time: Thu, 25 Apr 2024 10:48:07 +0000 on https://cohort.demoproject.info
+0000.003 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.2 WP: 6.5.2 PHP: 7.4.33 (fpm-fcgi, Linux server1.dolphinwebsolutions.com 3.10.0-1160.83.1.el7.x86_64 #1 SMP Wed Jan 25 16:41:43 UTC 2023 x86_64) MySQL: 10.3.39-MariaDB (max packet size=1073741824) WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 2048M (used: 18.7M | 2M) multisite: N openssl: OpenSSL 1.1.1w  11 Sep 2023 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.029 (0) Free space on disk containing Updraft's temporary directory: 40863.1 MB
+0000.032 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.036 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.041 (0) Set semaphore last lock (fd) time to 2024-04-25 10:48:07
+0000.042 (0) Semaphore lock (fd) complete
+0000.046 (0) Backup run: resumption=0, nonce=1d53bc5b16b3, file_nonce=1d53bc5b16b3 begun at=1714042087 (0s ago), job type=backup
+0000.048 (0) Scheduling a resumption (1) after 300 seconds (1714042387) in case this run gets aborted
+0000.056 (0) Checking if we have a zip executable available
+0000.058 (0) Testing: /usr/bin/zip
+0000.064 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.066 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.067 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.069 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.070 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.075 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.076 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.081 (0) Working binary zip found: /usr/bin/zip
+0000.087 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.089 (0) Creation of backups of directories: beginning
+0000.093 (0) No backup of plugins: excluded by user's options
+0000.096 (0) Beginning creation of dump of themes (split every: 400 MB)
+0000.125 (0) Total entities for the zip file: 14 directories, 57 files (0 skipped as non-modified), 0.5 MB
+0000.151 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-themes.zip.tmp: size is now: 0.30 MB
+0000.154 (0) Creating zip file manifest (backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-themes.zip.list-temp.tmp)
+0000.156 (0) Successfully created zip file manifest (size: 3357)
+0000.164 (0) Created themes zip (0) - 305.3 KB in 0 s (7414.9 KB/s) (sha1: a3ab896341f67e853a77be0b6be94c2812d23d4b, sha256: d492dccfe65cbbb75b6a536ccbf1d2dd24b331489f095e4c2256b3d2ce4eb3c1)
+0000.168 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0000.169 (0) No remote despatch: user chose no remote backup service
+0000.170 (0) Recording as successfully uploaded: backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-themes.zip
+0000.173 (0) Deleting zip manifest (backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-themes.zip.list.tmp)
+0000.176 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0000.178 (0) Number of backup sets in history: 1; groups (db): 1
+0000.179 (0) Examining (for databases) backup set with group_id=0, nonce=3a7351ebb361, datestamp=1714025087 (Apr 25 2024 06:04:47)
+0000.180 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.180 (0) Number of backup sets in history: 1; groups (files): 1
+0000.181 (0) Examining (for files) backup set with nonce=3a7351ebb361, datestamp=1714025087 (Apr 25 2024 06:04:47)
+0000.181 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.182 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.182 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.182 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.182 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0000.183 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0000.187 (0) No backup of uploads: excluded by user's options
+0000.188 (0) No backup of mu-plugins: excluded by user's options
+0000.189 (0) No backup of others: excluded by user's options
+0000.194 (0) Saving backup status to database (elements: 2)
+0000.197 (0) Beginning creation of database dump (WordPress DB)
+0000.199 (0) SQL compatibility mode is: ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0000.202 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0000.214 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `wp_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1455 bytes total)
+0000.216 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0000.237 (0) Table wp_options: Total expected rows (via COUNT): 327
+0000.238 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.306 (0) Table wp_options: Rows added in this batch (next record: 1257): 323 (uncompressed bytes in this segment=2345883) in 0.08 seconds
+0000.312 (0) Table wp_options: finishing file(s) (2, 428.7 KB)
+0000.316 (0) Table wp_users: Total expected rows (via COUNT): 2
+0000.318 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.321 (0) Table wp_users: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=1358) in 0.00 seconds
+0000.325 (0) Table wp_users: finishing file(s) (2, 0.7 KB)
+0000.330 (0) Table wp_usermeta: Total expected rows (via COUNT): 75
+0000.331 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.334 (0) Table wp_usermeta: Rows added in this batch (next record: 103): 75 (uncompressed bytes in this segment=10956) in 0.01 seconds
+0000.341 (0) Table wp_usermeta: finishing file(s) (2, 3.9 KB)
+0000.347 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0000.350 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=634) in 0.00 seconds
+0000.356 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0000.360 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0000.361 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.364 (0) Table wp_comments: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1885) in 0.01 seconds
+0000.369 (0) Table wp_comments: finishing file(s) (2, 0.7 KB)
+0000.375 (0) Table wp_e_notes: Total expected rows (via COUNT): 0
+0000.378 (0) Table wp_e_notes: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1885) in 0.01 seconds
+0000.383 (0) Table wp_e_notes: finishing file(s) (2, 0.7 KB)
+0000.388 (0) Table wp_e_notes_users_relations: Total expected rows (via COUNT): 0
+0000.390 (0) Table wp_e_notes_users_relations: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=852) in 0.00 seconds
+0000.395 (0) Table wp_e_notes_users_relations: finishing file(s) (2, 0.4 KB)
+0000.400 (0) Table wp_links: Total expected rows (via COUNT): 0
+0000.401 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1027) in 0.00 seconds
+0000.406 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0000.426 (0) Table wp_postmeta: Total expected rows (approximate): 3734
+0000.475 (0) Table wp_postmeta: Rows added in this batch (next record: 5645): 3605 (uncompressed bytes in this segment=3286706) in 0.07 seconds
+0000.482 (0) Table wp_postmeta: finishing file(s) (2, 135.1 KB)
+0000.493 (0) Table wp_posts: Total expected rows (via COUNT): 499
+0000.495 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.512 (0) Table wp_posts: Rows added in this batch (next record: 621): 499 (uncompressed bytes in this segment=970437) in 0.03 seconds
+0000.551 (0) Table wp_posts: finishing file(s) (2, 44.7 KB)
+0000.584 (0) Table wp_term_relationships: Total expected rows (approximate): 67
+0000.615 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 68 (uncompressed bytes in this segment=1624) in 0.03 seconds
+0000.642 (0) Table wp_term_relationships: finishing file(s) (2, 0.6 KB)
+0000.648 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 12
+0000.649 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.652 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 12): 12 (uncompressed bytes in this segment=1330) in 0.01 seconds
+0000.658 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0000.664 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0000.667 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=607) in 0.00 seconds
+0000.673 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0000.677 (0) Table wp_terms: Total expected rows (via COUNT): 12
+0000.678 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.681 (0) Table wp_terms: Rows added in this batch (next record: 12): 12 (uncompressed bytes in this segment=1042) in 0.00 seconds
+0000.686 (0) Table wp_terms: finishing file(s) (2, 0.5 KB)
+0000.690 (0) Table wp_e_events: Total expected rows (via COUNT): 0
+0000.693 (0) Table wp_e_events: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=511) in 0.00 seconds
+0000.698 (0) Table wp_e_events: finishing file(s) (2, 0.3 KB)
+0000.703 (0) Table wp_e_submissions: Total expected rows (via COUNT): 0
+0000.704 (0) Table wp_e_submissions: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1979) in 0.00 seconds
+0000.709 (0) Table wp_e_submissions: finishing file(s) (2, 0.7 KB)
+0000.714 (0) Table wp_e_submissions_actions_log: Total expected rows (via COUNT): 0
+0000.715 (0) Table wp_e_submissions_actions_log: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1140) in 0.00 seconds
+0000.720 (0) Table wp_e_submissions_actions_log: finishing file(s) (2, 0.5 KB)
+0000.726 (0) Table wp_e_submissions_values: Total expected rows (via COUNT): 0
+0000.727 (0) Table wp_e_submissions_values: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=673) in 0.00 seconds
+0000.734 (0) Table wp_e_submissions_values: finishing file(s) (2, 0.4 KB)
+0000.740 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 30
+0000.741 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.745 (0) Table wp_yoast_indexable: Rows added in this batch (next record: 33): 30 (uncompressed bytes in this segment=25230) in 0.01 seconds
+0000.751 (0) Table wp_yoast_indexable: finishing file(s) (2, 3.8 KB)
+0000.754 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 28
+0000.757 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 1000): 28 (uncompressed bytes in this segment=1242) in 0.00 seconds
+0000.762 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.5 KB)
+0000.767 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 24
+0000.769 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.772 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 24): 24 (uncompressed bytes in this segment=1234) in 0.00 seconds
+0000.777 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0000.781 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 0
+0000.784 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=829) in 0.00 seconds
+0000.789 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.4 KB)
+0000.793 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 23
+0000.795 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0000.798 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: 82): 23 (uncompressed bytes in this segment=4186) in 0.01 seconds
+0000.803 (0) Table wp_yoast_seo_links: finishing file(s) (2, 1 KB)
+0000.805 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_options.table.tmpr1258.gz (1/23/fopen): adding to final database dump
+0000.810 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_options.table.gz (2/23/fopen): adding to final database dump
+0000.811 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_users.table.tmpr3.gz (3/23/fopen): adding to final database dump
+0000.812 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_users.table.gz (4/23/fopen): adding to final database dump
+0000.814 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_usermeta.table.tmpr104.gz (5/23/fopen): adding to final database dump
+0000.815 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_usermeta.table.gz (6/23/fopen): adding to final database dump
+0000.816 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_commentmeta.table.tmpr0.gz (7/23/fopen): adding to final database dump
+0000.818 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_commentmeta.table.gz (8/23/fopen): adding to final database dump
+0000.819 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_comments.table.tmpr2.gz (9/23/fopen): adding to final database dump
+0000.820 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_comments.table.gz (10/23/fopen): adding to final database dump
+0000.821 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_notes.table.tmpr0.gz (11/23/fopen): adding to final database dump
+0000.823 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_notes.table.gz (12/23/fopen): adding to final database dump
+0000.824 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_notes_users_relations.table.tmpr0.gz (13/23/fopen): adding to final database dump
+0000.825 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_notes_users_relations.table.gz (14/23/fopen): adding to final database dump
+0000.826 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_links.table.tmpr0.gz (15/23/fopen): adding to final database dump
+0000.828 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_links.table.gz (16/23/fopen): adding to final database dump
+0000.829 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_postmeta.table.tmpr5646.gz (17/23/fopen): adding to final database dump
+0000.831 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_postmeta.table.gz (18/23/fopen): adding to final database dump
+0000.832 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_posts.table.tmpr622.gz (19/23/fopen): adding to final database dump
+0000.834 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_posts.table.gz (20/23/fopen): adding to final database dump
+0000.835 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_term_relationships.table.tmpr100001.gz (21/23/fopen): adding to final database dump
+0000.836 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_term_relationships.table.gz (22/23/fopen): adding to final database dump
+0000.837 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_term_taxonomy.table.tmpr13.gz (23/23/fopen): adding to final database dump
+0000.839 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_term_taxonomy.table.gz (24/23/fopen): adding to final database dump
+0000.840 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_termmeta.table.tmpr0.gz (25/23/fopen): adding to final database dump
+0000.841 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_termmeta.table.gz (26/23/fopen): adding to final database dump
+0000.842 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_terms.table.tmpr13.gz (27/23/fopen): adding to final database dump
+0000.844 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_terms.table.gz (28/23/fopen): adding to final database dump
+0000.845 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_events.table.tmpr0.gz (29/23/fopen): adding to final database dump
+0000.846 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_events.table.gz (30/23/fopen): adding to final database dump
+0000.847 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_submissions.table.tmpr0.gz (31/23/fopen): adding to final database dump
+0000.848 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_submissions.table.gz (32/23/fopen): adding to final database dump
+0000.850 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_submissions_actions_log.table.tmpr0.gz (33/23/fopen): adding to final database dump
+0000.851 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_submissions_actions_log.table.gz (34/23/fopen): adding to final database dump
+0000.852 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_submissions_values.table.tmpr0.gz (35/23/fopen): adding to final database dump
+0000.853 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_e_submissions_values.table.gz (36/23/fopen): adding to final database dump
+0000.855 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_indexable.table.tmpr34.gz (37/23/fopen): adding to final database dump
+0000.856 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_indexable.table.gz (38/23/fopen): adding to final database dump
+0000.856 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_indexable_hierarchy.table.tmpr1001.gz (39/23/fopen): adding to final database dump
+0000.857 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_indexable_hierarchy.table.gz (40/23/fopen): adding to final database dump
+0000.859 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_migrations.table.tmpr25.gz (41/23/fopen): adding to final database dump
+0000.860 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_migrations.table.gz (42/23/fopen): adding to final database dump
+0000.861 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_primary_term.table.tmpr0.gz (43/23/fopen): adding to final database dump
+0000.862 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_primary_term.table.gz (44/23/fopen): adding to final database dump
+0000.864 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_seo_links.table.tmpr83.gz (45/23/fopen): adding to final database dump
+0000.865 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db-table-wp_yoast_seo_links.table.gz (46/23/fopen): adding to final database dump
+0000.868 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db.gz: finished writing out complete database file (626.3 KB)
+0000.880 (0) Total database tables backed up: 23 (backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db.gz, size: 641493, sha1: 4e824972e012c6606e71aeb26482b9426860ad70, sha256: 9552477f11d2ac8c51e90a3e4db2c58fcd49a78565125c6a1ef67bcf1008d9ba)
+0000.886 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-themes.zip: themes: This file has already been successfully uploaded
+0000.888 (0) backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db.gz: db: This file has not yet been successfully uploaded: will queue
+0000.889 (0) Saving backup history. Total backup size: 931.7 KB
+0000.892 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0000.896 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0000.898 (0) No remote despatch: user chose no remote backup service
+0000.899 (0) Recording as successfully uploaded: backup_2024-04-25-1048_Cohort_Capital_1d53bc5b16b3-db.gz
+0000.903 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0000.905 (0) Number of backup sets in history: 2; groups (db): 1
+0000.907 (0) Examining (for databases) backup set with group_id=0, nonce=1d53bc5b16b3, datestamp=1714042087 (Apr 25 2024 10:48:07)
+0000.907 (0) This backup set is the backup set just made, so will not be deleted.
+0000.907 (0) Examining (for databases) backup set with group_id=0, nonce=3a7351ebb361, datestamp=1714025087 (Apr 25 2024 06:04:47)
+0000.907 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.907 (0) Number of backup sets in history: 2; groups (files): 1
+0000.908 (0) Examining (for files) backup set with nonce=1d53bc5b16b3, datestamp=1714042087 (Apr 25 2024 10:48:07)
+0000.908 (0) This backup set is the backup set just made, so will not be deleted.
+0000.909 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0000.911 (0) Examining (for files) backup set with nonce=3a7351ebb361, datestamp=1714025087 (Apr 25 2024 06:04:47)
+0000.911 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.911 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.911 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.911 (0) This backup set (1714025087) was an 'Always Keep' backup, and we have not yet reached any retain limits, so it should be counted in the count of how many have been retained for purposes of the 'how many to retain' count. It will not be pruned. Skipping.
+0000.911 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0000.911 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0000.915 (0) Resume backup (1d53bc5b16b3, 0): finish run
+0000.919 (0) Decremented the semaphore (fd) by 1
+0000.921 (0) Semaphore (fd) unlocked
+0000.924 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0000.929 (0) No email will/can be sent - the user has not configured an email address.
+0000.930 (0) The backup succeeded and is now complete

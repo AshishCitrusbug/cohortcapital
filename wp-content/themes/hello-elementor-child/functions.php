@@ -31,9 +31,9 @@ function hello_elementor_child_scripts_styles() {
 		],
 		HELLO_ELEMENTOR_CHILD_VERSION
 	);
-	
+	wp_enqueue_style('home-style', get_stylesheet_directory_uri() . '/assets/css/home-banner.css');
 	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery-core'), '1.0.0' );
-	
+	wp_enqueue_script( 'banner-script', get_stylesheet_directory_uri() . '/assets/js/banner-script.js', array(), '1.0.0' );
 
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
