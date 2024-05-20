@@ -61,6 +61,10 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 .team__main--inner-author h4 {
   color: #252A6B;
   margin: 0 0 5px;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 28px;
 }
 .team__main--inner-author {
   padding: 30px 14px 0;
@@ -145,6 +149,14 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 .get-in-touch__form form .get-in-touch__form--main span input::placeholder {
   color: #fff;
 }
+.get-in-touch__form form .get-in-touch__form--main span .wpcf7-not-valid-tip {
+  margin: 0;
+}
+.get-in-touch__form .wpcf7 form.sent .wpcf7-response-output {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
 .get-in-touch__form form span input,
 .get-in-touch__form form span select,
 .get-in-touch__form form span textarea {
@@ -153,11 +165,20 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
   border: 0;
   border-bottom: 1px solid #fff;
   border-radius: 0;
-  margin: 0 0 25px;
+  margin: 0 0 10px;
   padding: 10px 20px;
   font-size: 16px;
   line-height: 19px;
   font-weight: 400;
+}
+.get-in-touch__form form .get-in-touch__form--main span.wpcf7-form-control-wrap {
+  margin: 0 6px 25px;
+}
+.get-in-touch__form form span.wpcf7-form-control-wrap ,
+.get-in-touch__form form span.wpcf7-form-control-wrap ,
+.get-in-touch__form form span.wpcf7-form-control-wrap {
+  margin: 0 0 25px;
+  display: block;
 }
 .get-in-touch__form form span input::placeholder,
 .get-in-touch__form form span textarea::placeholder {
@@ -167,6 +188,10 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 .get-in-touch__form form span select:focus,
 .get-in-touch__form form span textarea:focus {
   outline: none;
+}
+.get-in-touch__form form span textarea {
+  resize: none;
+  height: 135px;
 }
 .get-in-touch__form form span input[type=email] {
   border-color: #fff;
@@ -202,9 +227,6 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
   text-align: center;
   margin: 20px 0 0;
 }
-.loan-enquiry__form {
-  margin: 0 0 115px;
-}
 .loan-enquiry__form form .loan-enquiry__form--main {
   margin: 0 0 25px;
 }
@@ -217,8 +239,8 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input,
 .loan-enquiry__form form .loan-enquiry__form--main span textarea {
-  background: #6F75CB80;
-  border-color: #6F75CB80;
+  border-color: transparent;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   border-radius: 5px;
   color: #fff;
   font-size: 16px;
@@ -226,9 +248,15 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
   padding: 10px 20px;
   font-weight: 400;
 }
+.loan-enquiry__form form .loan-enquiry__form--main span input {
+  border-radius: 30px;
+}
+.loan-enquiry__form form .loan-enquiry__form--main span textarea {
+  border-radius: 10px;
+}
 .loan-enquiry__form form .loan-enquiry__form--main span input::placeholder,
 .loan-enquiry__form form .loan-enquiry__form--main span textarea::placeholder {
-  color: #918DC4; 
+  color: #fff; 
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input:focus,
 .loan-enquiry__form form .loan-enquiry__form--main span textarea:focus {
@@ -243,27 +271,36 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
   color: #fff;
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input::placeholder {
-  color: #918DC4;
+  color: #fff;
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input[type=date]::-webkit-calendar-picker-indicator {
   filter: invert(1);
   opacity: 1;
 }
+.loan-enquiry__form form .loan-enquiry__form--main .flag-container ul.country-list li.country {
+  display: flex;
+  align-items: center;
+}
+.loan-enquiry__form form .loan-enquiry__form--main .flag-container ul.country-list li.country .dial-code {
+  margin: 0 0 0 10px;
+}
 .loan-enquiry__form form input[type=submit] {
-  margin: 120px auto 0;
+  margin: 25px 0 0;
   display: block;
-  background: #FF63AE;
+  background: #ff63ae;
   color: #fff;
-  border-color: #FF63AE;
+  border-color: #ff63ae;
 }
 .loan-enquiry__form form input[type=submit]:hover {
-  background: transparent;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  color: #fff;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 .loan-enquiry__form form input[type=submit]:focus {
   outline: none;
 }
 .loan-enquiry__form form.invalid .wpcf7-response-output {
-  border-color: #FF63AE;
+  border-color: red;
   color: #fff;
   padding: 10px 5px;
   text-align: center;
@@ -293,10 +330,33 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 .loan-enquiry__form form .loan-enquiry__form--main.radio-main .main-label {
   margin: 0 0 19px;
 }
+.loan-enquiry__form form {
+  height:700px;
+  overflow-y:auto;
+  padding-right: 10px;
+}
+
+.loan-enquiry__form form::-webkit-scrollbar {
+  background: lightyellow;
+  width: 5px;
+  background: linear-gradient(to right, transparent 45%, #ADAAAA 45%, #ADAAAA 55%, transparent 55%);
+  height: 100px;
+  border-radius: 20px;
+  max-height: 100px;
+  height: 100px;
+}
+.loan-enquiry__form form::-webkit-scrollbar-track {
+  border-radius: 10px;
+  width: 100px;
+}
+.loan-enquiry__form form::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: white;
+  width: 100px;
+}
 .footer__bottom-menu .elementor-widget-container a {
   margin: 0 18px;
 }
-
 .transaction__img {
   position: relative;
   background-size: 100% 100%;
@@ -328,48 +388,302 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 .transactions__main--cont-data--title {
   max-width: 65%;
   width: 100%;
+  font-family: 'New Atten Round';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.17px;
+
 }
 .transactions__main--cont-data--value {
   max-width: 35%;
   width: 100%;
+  font-family: 'New Atten Round';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.17px;
+}
+.footer__bottom-menu .elementor-widget-container a {
+  font-weight: 500;
+}
+span.wpcf7-not-valid-tip {
+  display: none;
+}
+.contact-us__form-main form span input,
+.contact-us__form-main form span select,
+.contact-us__form-main form span textarea {
+  padding: 11px 25px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  backdrop-filter: blur(20px);
+  color: #fff;
+  margin: 0 0 10px;
+}
+.contact-us__form-main form span input.wpcf7-not-valid,
+.contact-us__form-main form span select.wpcf7-not-valid,
+.contact-us__form-main form span textarea.wpcf7-not-valid {
+  border-color: red;
+}
+.contact-us__form-main form span.wpcf7-form-control-wrap {
+  margin: 0 0 25px;
+} 
+.contact-us__form-main form span.wpcf7-form-control-wrap span.wpcf7-not-valid-tip {
+  max-width: 100%;
+}
+.contact-us__form-main form span input::placeholder,
+.contact-us__form-main form span textarea::placeholder {
+  color: #fff;
+}
+.contact-us__form-main form span textarea {
+  margin: 0;
+  border-radius: 10px;
+}
+.contact-us__form-main form .contact-us__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-us__form-main form .contact-us__main span {
+  max-width: calc(50% - 10px);
+  width: 100%;
+}
+.contact-us__form-main form.invalid  .wpcf7-response-output {
+  border-color: red;
+  color: #fff;
+  text-align: center;
+  margin: 30px 0 0;
+}
+.contact-us__form-main form input.contact-us__btn {
+  background: #FF63AE;
+  color: #fff;
+  border-color: #FF63AE;
+}
+
+.contact-us__form-main form input.contact-us__btn:hover {
+  background: #252A6B;
+}
+.contact-us__form-main form span {
+  display: block;
+}
+.contact-us__form-main form span input:focus,
+.contact-us__form-main form span select:focus,
+.contact-us__form-main form span textarea:focus,
+.contact-us__form-main form input.contact-us__btn:focus {
+  outline: none;
+}
+.contact-us__form-main form .wpcf7-response-output {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 30px 0 0;
+}
+.contact-us__form-main form span select option {
+  color: #252A6B;
+}
+.contact-us__form-main form span select,
+.contact-us__form-main form span input {
+  border-radius: 30px;
+}
+.contact-us__form-main form span select:before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  background: url("https://cohort.demoproject.info/wp-content/uploads/2024/05/dropdown-arrow.png");
+  z-index: 1;
+}
+.contact-us__form-main form span select {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/wp-content/uploads/2024/05/dropdown-arrow.png');
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main {
+  align-items: end;
+}
+.post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
+  margin: 0 160px 0 0;
+}
+.home-branch__main--inner .transactions {
+  padding: 0;
+  display: block;
+}
+.home-branch__main--inner .transactions__main--arrow {
+  display: none;
+}
+.home-branch__main--inner .transactions__title h4 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+  margin: 0 0 62px;
+}
+.home-branch__main--inner .transactions__main--cont {
+  padding: 20px 0 40px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: 0 0 62px;
+}
+.home-branch__main--inner .transactions__main--cont-data--title {
+  max-width: 100%;
+  font-family: 'New Atten Round';
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+.home-branch__main--inner  .transactions__main--cont-data--value {
+  max-width: 100%;
+  font-size: 42px;
+  line-height: 72px;
+  font-weight: 500;
+  font-family: 'New Atten Round';
+}
+.home-branch__main--inner .transactions__main--cont-data {
+  flex-direction: column-reverse;
+  margin: 0;
+  width: auto;
+}
+.accordion__main .elementor-accordion-item .elementor-tab-content {
+  border: 0;
+}
+.news-slider__item .swiper .swiper-wrapper .swiper-slide {
+  flex: 1;
+}
+.testimonial__rating .e-rating .e-rating-wrapper .e-icon {
+  background: #00B67A;
+  height: 22px;
+  width: 22px;
+  position: relative;
+}
+.testimonial__rating .e-rating .e-rating-wrapper .e-icon .e-font-icon-svg.e-fas-star {
+  width: 15px;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+}
+.header-main__bg-blue .header__menu--list nav .elementor-nav-menu li a {
+  position: relative;
+}
+.header-main__bg-blue .header__menu--list nav .elementor-nav-menu li a:before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  transition: all 500ms linear;
+}
+.header-main__bg-blue .header__menu--list nav .elementor-nav-menu li a:hover::before,
+.header-main__bg-blue .header__menu--list nav .elementor-nav-menu li a.elementor-item-active::before{
+  transition: 500ms linear;
+  width: 100%;
 }
 
 
-
-@media (min-width: 1200px) {
-  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu {
-    display: none;
+@media (max-width: 1440px) {
+  .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
+    margin: 0 100px 0 0;
   }
 }
 
+
+@media (min-width: 992px) {
+  .news-slider__item .swiper .swiper-wrapper .swiper-slide-active {
+    flex: 2;
+  }
+}
+@media (min-width: 1200px) {
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a {
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #FFFFFF00;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #FFFFFF;
+    border-radius: 30px 30px 30px 30px;
+    padding: 15px 30px 15px 30px !important;
+  }
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a:before {
+    display:none;
+  }
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a:hover {
+    border-color: #ff63ae;
+  }
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu.current-menu-item a.elementor-item-active {
+    background: #ff63ae;
+    color: #fff;
+    fill: #FFFFFF;
+    border-color: #ff63ae;
+  }
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu {
+    margin: 0 0 0 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu.current-menu-item a.elementor-item-active {
+    background: #ff63ae;
+    color: #fff !important;
+    fill: #FFFFFF !important;
+    border-color: #ff63ae;
+  }
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a {
+    padding: 15px 50px 15px 50px !important;
+  }
+  .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu {
+    margin: 0 0 0 100px;
+  }
+}
+
+
+
 @media (max-width: 1199px) {
+  .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
+    margin: 0;
+  }
   .header-main .header-btn {
     display: none;
   }
   .team__main--inner {
     max-width: calc(100% / 3);
   }
-  .loan-enquiry__form {
-    margin: 0 0 95px;
-  }
-  .loan-enquiry__form form input[type=submit] {
-    margin: 100px auto 0;
-  }
 }
 
 @media (max-width: 991px) {
+  .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
+    margin: 0;
+  }
   .team__main--inner {
     max-width: calc(100% / 2);
-  }
-  .loan-enquiry__form {
-    margin: 0 0 75px;
-  }
-  .loan-enquiry__form form input[type=submit] {
-    margin: 80px auto 0;
   }
 }
 
 @media (max-width: 767px) {
+  .home-branch__main--inner .transactions__main--cont-data--value {
+    font-size: 32px;
+    line-height: 52px;
+  }
+  .home-branch__main--inner .transactions__title h4 {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 0 0 32px;
+  }
+  .home-branch__main--inner .transactions__main--cont {
+    padding: 20px 0;
+    margin: 0 0 32px;
+  }
+  .contact-us__form-main form .contact-us__main {
+    display: block;
+  }
+  .contact-us__form-main form .contact-us__main span {
+    max-width: 100%;
+  }
   .footer__bottom-menu .elementor-widget-container a {
     max-width: 50%;
     width: 100%;
@@ -386,15 +700,20 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
     height: fit-content;
     min-height: 370px;
   }
-  .loan-enquiry__form {
-    margin: 0 0 55px;
-  }
-  .loan-enquiry__form form input[type=submit] {
-    margin: 60px auto 0;
-  }
+
 }
 
 @media (max-width: 575px) {
+  .home-branch__main--inner .transactions__main--cont-data {
+    margin: 0 0 20px;
+  }
+  .home-branch__main--inner .transactions__main--cont-data--title {
+    text-align: center;
+  }
+  .home-branch__main--inner .transactions__main--cont {
+    display: block;
+    text-align: center;
+  }
   .team__main--inner {
     max-width: 100%;
   }
@@ -405,4 +724,49 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
     margin-top: 20px;
   }
   
+}
+
+/* Custom Animation Effect */
+
+/* ========================= social Icon Effect ==================================== */
+.fadein__other {
+  opacity: 0;
+  animation: fadein 2.5s forwards ;
+}
+.fadein__other.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+} 
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(0, 50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+/* ================ 17-05-2024 =========================== */
+
+.team__main--inner-author h4{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.loan-enquiry__form form .wpcf7-not-valid {
+    border: 1px solid #dc3232 !important;
+}
+
+@media (min-width: 767px) and (max-width: 1199px) { 
+  .elementor-nav-menu--toggle .elementor-menu-toggle.elementor-active+.elementor-nav-menu__container {
+      transform: scaleY(1);
+      max-height: var(--menu-height);
+      animation: hide-scroll .3s backwards;
+      margin-top: 15px;
+  }
 }
