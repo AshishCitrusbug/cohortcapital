@@ -14,14 +14,42 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 
 /* Add your custom styles here */
 
-header.elementor.elementor-location-header .header-main.header-sticky {
-  background: #fff;
+header.elementor.elementor-location-header .header-main.header-main__bg-blue {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 500ms linear;
+}
+header.elementor.elementor-location-header .header-main.header-main__bg-blue.header-sticky.scrolling_down {
+  transform: translateY(-100%);
+}
+header.elementor.elementor-location-header .header-main.header-main__bg-blue.header-sticky.scrolling_up {
+  transform: translateY(0);
+  transition: 500ms linear;
 }
 header.elementor.elementor-location-header .header-main.header-main__bg-blue.header-sticky {
   background: #252a6b;
   box-shadow: 0 0px 2px 0px #fff;
+  position: fixed;
+  transition: all 500ms linear;
 }
-
+header.elementor.elementor-location-header .header-main.white-header.header-sticky {
+  background: #ffffff;
+  box-shadow: 0 0px 2px 0px #252a6b;
+  position: fixed;
+  transition: all 500ms linear;
+}
+header.elementor.elementor-location-header .header-main.white-header.header-sticky.scrolling_down {
+  transform: translateY(-100%);
+}
+.header-main.white-header .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a {
+  border-color: #252A6B;
+}
+.header-main.white-header .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a:hover {
+  border-color: #ff63ae;
+}
 .team__main {
   display: flex;
   align-items: stretch;
@@ -202,6 +230,10 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 .get-in-touch__form form span select option {
   color: #000;
 }
+.get-in-touch__form form span select {
+  background: url("/wp-content/uploads/2024/05/drop-down.png") no-repeat scroll right center, transparent;
+  -webkit-appearance: none;
+}
 .get-in-touch__form form input[type="submit"] {
   display: block;
   margin: 0 0 0 auto;
@@ -229,10 +261,11 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
 }
 .loan-enquiry__form form .loan-enquiry__form--main {
   margin: 0 0 25px;
+  /* overflow: hidden; */
 }
 .loan-enquiry__form form .loan-enquiry__form--main label {
   margin: 0 0 6px 11px;
-  color: #F1EFEF;
+  color: #fff;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -335,7 +368,10 @@ header.elementor.elementor-location-header .header-main.header-main__bg-blue.hea
   overflow-y:auto;
   padding-right: 10px;
 }
-
+.loan-enquiry__form form .wpcf7-response-output {
+  color: #fff;
+  text-align: center;
+}
 .loan-enquiry__form form::-webkit-scrollbar {
   background: lightyellow;
   width: 5px;
@@ -585,6 +621,138 @@ span.wpcf7-not-valid-tip {
   transition: 500ms linear;
   width: 100%;
 }
+.team__main--inner-author h4{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.loan-enquiry__form form .wpcf7-not-valid {
+  border: 1px solid #dc3232 !important;
+}
+.testimonial__main--item-top:last-child {
+  margin-top: 23px;
+}
+.testimonial__main--item-top {
+  border-radius: 10px;
+  background: #fff;
+  padding: 54px 34px 37px;
+}
+.testimonial__main--item-top-cont {
+  text-align: center;
+  margin: 0 0 100px;
+}
+.testimonial__main--item-top-cont ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 49px 0 10px;
+}
+.testimonial__main--item-top-cont ul li {
+  width: 22px;
+  height: 22px;
+  background: #00B67A;
+  margin: 0 1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial__main--item-top-cont ul li a {
+  display: block;
+}
+.testimonial__main--item-top-cont ul li a img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+}
+.testimonial__main--item-top-cont p {
+  font-size: 18px;
+  line-height: 22px;
+  color: #251E86;
+  font-weight: 400;
+  text-align: left;
+  font-family: "New Atten Round";
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  min-height: 110px;
+  margin: 0;
+}
+.testimonial__main.owl-carousel .owl-item .testimonial__main--item-top-cont img {
+  width: auto;
+  margin: 0 auto;
+}
+.testimonial__main--item-top-auth h4 {
+  font-family:"New Atten Round";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.17px;
+  text-align: left;
+  margin: 0 0 10px;
+  color: #252A6B;
+}
+.testimonial__main--item-top-auth p {
+  font-family: "New Atten Round";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.82px;
+  text-align: left;
+  color: #252A6B;
+  margin: 0;
+}
+.testimonial__main.owl-carousel .owl-stage-outer {
+  margin: 0 0 30px;
+}
+.testimonial__main.owl-carousel .owl-dots {
+  float: left;
+  margin: 0 0 0 30px;
+}
+.testimonial__main.owl-carousel .owl-dots .owl-dot {
+  margin: 0 4px;
+}
+.testimonial__main.owl-carousel .owl-dots .owl-dot span {
+  height: 8px;
+  width: 8px;
+  margin: 0;
+  background: #ADAAAA26;
+}
+.testimonial__main.owl-carousel .owl-dots .owl-dot.active span {
+  background: #ADAAAA;
+}
+.testimonial__main.owl-carousel .owl-dots .owl-dot:focus {
+  outline: none;
+}
+.testimonial__main.owl-carousel .owl-nav {
+  float: right;
+  margin: 0 34px 0 0;
+}
+.testimonial__main.owl-carousel .owl-nav .owl-prev,
+.testimonial__main.owl-carousel .owl-nav .owl-next {
+  margin: 0;
+}
+.testimonial__main.owl-carousel .owl-nav .owl-prev:hover,
+.testimonial__main.owl-carousel .owl-nav .owl-next:hover {
+  background: transparent;
+}
+.testimonial__main.owl-carousel .owl-nav .owl-prev:focus,
+.testimonial__main.owl-carousel .owl-nav .owl-next:focus {
+  outline: none;
+}
+.testimonial__main.owl-carousel .owl-nav .owl-prev span, 
+.testimonial__main.owl-carousel .owl-nav .owl-next span {
+  width: 30px;
+  height: 30px;
+  font-size: 70px;
+  display: block;
+}
+.testimonial__main.owl-carousel .owl-nav .owl-prev {
+  margin: 0 10px 0 0;
+}
+
 
 
 @media (max-width: 1440px) {
@@ -592,8 +760,6 @@ span.wpcf7-not-valid-tip {
     margin: 0 100px 0 0;
   }
 }
-
-
 @media (min-width: 992px) {
   .news-slider__item .swiper .swiper-wrapper .swiper-slide-active {
     flex: 2;
@@ -640,9 +806,6 @@ span.wpcf7-not-valid-tip {
     margin: 0 0 0 100px;
   }
 }
-
-
-
 @media (max-width: 1199px) {
   .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
     margin: 0;
@@ -654,7 +817,6 @@ span.wpcf7-not-valid-tip {
     max-width: calc(100% / 3);
   }
 }
-
 @media (max-width: 991px) {
   .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
     margin: 0;
@@ -663,7 +825,6 @@ span.wpcf7-not-valid-tip {
     max-width: calc(100% / 2);
   }
 }
-
 @media (max-width: 767px) {
   .home-branch__main--inner .transactions__main--cont-data--value {
     font-size: 32px;
@@ -702,7 +863,6 @@ span.wpcf7-not-valid-tip {
   }
 
 }
-
 @media (max-width: 575px) {
   .home-branch__main--inner .transactions__main--cont-data {
     margin: 0 0 20px;
@@ -725,13 +885,21 @@ span.wpcf7-not-valid-tip {
   }
   
 }
+@media (min-width: 767px) and (max-width: 1199px) { 
+  .elementor-nav-menu--toggle .elementor-menu-toggle.elementor-active+.elementor-nav-menu__container {
+    transform: scaleY(1);
+    max-height: var(--menu-height);
+    animation: hide-scroll .3s backwards;
+    margin-top: 15px;
+  }
+}
 
 /* Custom Animation Effect */
 
 /* ========================= social Icon Effect ==================================== */
 .fadein__other {
   opacity: 0;
-  animation: fadein 2.5s forwards ;
+  animation: fadein 1.5s forwards ;
 }
 .fadein__other.visible {
   opacity: 1;
@@ -746,27 +914,5 @@ span.wpcf7-not-valid-tip {
   to {
     opacity: 1;
     transform: translate(0, 0);
-  }
-}
-
-
-/* ================ 17-05-2024 =========================== */
-
-.team__main--inner-author h4{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.loan-enquiry__form form .wpcf7-not-valid {
-    border: 1px solid #dc3232 !important;
-}
-
-@media (min-width: 767px) and (max-width: 1199px) { 
-  .elementor-nav-menu--toggle .elementor-menu-toggle.elementor-active+.elementor-nav-menu__container {
-      transform: scaleY(1);
-      max-height: var(--menu-height);
-      animation: hide-scroll .3s backwards;
-      margin-top: 15px;
   }
 }

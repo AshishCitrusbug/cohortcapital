@@ -7,6 +7,60 @@ jQuery(document).ready(function ($) {
       $('.header-main').removeClass('header-sticky');
     }
   });
+
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop){
+        //âíèç
+      $('.header-main').addClass('scrolling_down');
+      $('.header-main').removeClass('scrolling_up');
+    } else {
+        // ââåðõ 
+      $('.header-main').addClass('scrolling_up');
+      $('.header-main').removeClass('scrolling_down');
+    }
+    lastScrollTop = st;
+  });	
+
+
+  /* ----- Hire Related Js Start ----- */
+
+  class Testimonial {
+    constructor(element) {
+      this.$element = $(element);
+      this.$slider = this.$element.find('.testimonial__main');
+      this.init()
+    }
+    init() {
+      this.$slider.owlCarousel({
+        loop: true,
+        autoplay: false,
+        dots: true,
+        margin: 23,
+        nav: true,
+        navText: ["<img src='/wp-content/uploads/2024/05/left-arrow.svg'>", "<img src='/wp-content/uploads/2024/05/right-arrow.svg'>"],
+        
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          1200: {
+            items: 3,
+          },
+        }
+      });
+    }
+  }
+
+  $('[data-testimonial]').each(
+    (index, element) => new Testimonial(element)
+  )
+
+  /* ----- Hire Related Js End ----- */
   
 });
 
@@ -20,7 +74,16 @@ jQuery(document).ready(function($) {
     //     this.value = this.value.replace(/[^0-9]/g, '');
     // });
 
-  
+      // Function to restrict characters in the phone number field
+    $('input[name="phonetext-987"]').on('keypress', function(event) {
+        var charCode = event.which || event.keyCode;
+        // Allow digits (0-9) and hyphen (-)
+        if (charCode >= 48 && charCode <= 57 || charCode == 45) {
+            return true;
+        }
+        // Prevent any other character from being entered
+        event.preventDefault();
+    });
 
     $('input[name="amount-text"]').on('input', function() {
         this.value = this.value.replace(/[^0-9]/g, '');
@@ -114,3 +177,8 @@ jQuery(document).ready(function ($) {
     }, 1000); 
   });
 });
+
+
+
+
+
