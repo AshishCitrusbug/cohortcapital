@@ -67,19 +67,10 @@ function team_member_shortcode() {
 add_shortcode( 'team_member', 'team_member_shortcode' );
 function transactions_field_loop()
 {
-    $args = array(
-        'post_type'      => 'transaction',
-        'posts_per_page' => -1,
-    );
-
-    $query = new WP_Query($args);
-
-    ob_start();
-    
-    if ($query->have_posts()) {
-        $loan             = get_field('loan');
-        $term_outstanding = get_field('term_outstanding');
-        $ltv              = get_field('ltv'); ?>
+   
+    $loan             = get_field('loan');
+    $term_outstanding = get_field('term_outstanding');
+    $ltv              = get_field('ltv'); ?>
 
 <div class="transactions">
     <div class="transactions__main">
@@ -95,7 +86,7 @@ function transactions_field_loop()
             <?php }; ?>
             <?php if (!empty($term_outstanding)) { ?>
             <div class="transactions__main--cont-data">
-                <span class="transactions__main--cont-data--title">Term outstanding:</span>
+                <span class="transactions__main--cont-data--title">Term:</span>
                 <span class="transactions__main--cont-data--value"><?php echo $term_outstanding; ?></span>
             </div>
             <?php } ?>
@@ -108,14 +99,14 @@ function transactions_field_loop()
         </div>
     </div>
     <div class="transactions__main--arrow">
-        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/trans-arrow.svg'); ?>"
+        <a href="<?php echo get_permalink(); ?>"> <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/trans-arrow.svg'); ?>"
             alt="trans-arrow">
+            </a>
     </div>
 </div>
 
-<?php wp_reset_postdata();
-    }
-    return ob_get_clean();
+<?php
+
 }
 add_shortcode('transactions_details', 'transactions_field_loop');
 
@@ -276,3 +267,15 @@ function testimonial_home_page($atts)
 }
 
 add_shortcode('testimonial_home_page_section', 'testimonial_home_page');
+
+/* Insights search articles section */
+
+function insights_article_search($atts)
+{
+    ob_start(); 
+    
+
+return ob_get_clean();
+}
+
+add_shortcode('insights_page_article_search_section', 'insights_article_search');

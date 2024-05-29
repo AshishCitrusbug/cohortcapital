@@ -77,12 +77,13 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 .team__main--inner-title h2 {
   margin: 0;
   color: #fff;
+  font-family: "New Atten", Sans-serif;
 }
 .team__main--inner-title p {
   color: #fff;
   margin: 0;
   font-size: 16px;
-  font-family: "New Atten Round";
+  font-family: "New Atten", Sans-serif;
   line-height: 19px;
   font-weight: 400;
 }
@@ -111,6 +112,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   line-height: 22px;
   font-weight: 300;
   color: #252A6B;
+  font-family: "New Atten", Sans-serif;
 }
 .team__main--inner-main {
   position: relative;
@@ -145,6 +147,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 }
 .team__main--inner-over--author h3 {
   margin: 0 0 5px;
+  font-family: "New Atten", Sans-serif;
 }
 .team__main--inner-over--author p {
   margin: 0;
@@ -402,6 +405,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   position: absolute;
   width: 100%;
   background: linear-gradient(0.43deg, rgb(0 0 0 / 60%) 0.38%, rgba(0, 0, 0, 0) 62.53%);
+  border-radius: 20px;
 }
 .transactions {
   display: flex;
@@ -411,6 +415,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 }
 .transactions__title h4 {
   margin: 0 0 15px;
+  font-family: "New Atten", Sans-serif;
 }
 .transactions__main--cont-data {
   display: flex;
@@ -424,7 +429,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 .transactions__main--cont-data--title {
   max-width: 65%;
   width: 100%;
-  font-family: 'New Atten Round';
+  font-family: "New Atten", Sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.17px;
@@ -433,7 +438,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 .transactions__main--cont-data--value {
   max-width: 35%;
   width: 100%;
-  font-family: 'New Atten Round';
+  font-family: "New Atten", Sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21.17px;
@@ -555,6 +560,7 @@ span.wpcf7-not-valid-tip {
   font-weight: 500;
   line-height: 38px;
   margin: 0 0 62px;
+  font-family: "New Atten", Sans-serif;
 }
 .home-branch__main--inner .transactions__main--cont {
   padding: 20px 0 40px;
@@ -567,7 +573,7 @@ span.wpcf7-not-valid-tip {
 }
 .home-branch__main--inner .transactions__main--cont-data--title {
   max-width: 100%;
-  font-family: 'New Atten Round';
+  font-family: "New Atten", Sans-serif;
   font-size: 21px;
   font-weight: 400;
   line-height: 28px;
@@ -578,7 +584,7 @@ span.wpcf7-not-valid-tip {
   font-size: 42px;
   line-height: 72px;
   font-weight: 500;
-  font-family: 'New Atten Round';
+  font-family: "New Atten", Sans-serif;
 }
 .home-branch__main--inner .transactions__main--cont-data {
   flex-direction: column-reverse;
@@ -625,6 +631,7 @@ span.wpcf7-not-valid-tip {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-family: "New Atten", Sans-serif;
 }
 .loan-enquiry__form form .wpcf7-not-valid {
   border: 1px solid #dc3232 !important;
@@ -673,7 +680,7 @@ span.wpcf7-not-valid-tip {
   color: #251E86;
   font-weight: 400;
   text-align: left;
-  font-family: "New Atten Round";
+  font-family: "New Atten", Sans-serif;
   -webkit-line-clamp: 5;
   overflow: hidden;
   display: -webkit-box;
@@ -683,11 +690,13 @@ span.wpcf7-not-valid-tip {
   margin: 0;
 }
 .testimonial__main.owl-carousel .owl-item .testimonial__main--item-top-cont img {
-  width: auto;
   margin: 0 auto;
+  height: 178px;
+  width: 178px;
+  border-radius: 50%;
 }
 .testimonial__main--item-top-auth h4 {
-  font-family:"New Atten Round";
+  font-family:"New Atten", Sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.17px;
@@ -696,7 +705,7 @@ span.wpcf7-not-valid-tip {
   color: #252A6B;
 }
 .testimonial__main--item-top-auth p {
-  font-family: "New Atten Round";
+  font-family: "New Atten", Sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18.82px;
