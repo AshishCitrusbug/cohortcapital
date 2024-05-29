@@ -32,10 +32,13 @@ function hello_elementor_child_scripts_styles() {
 		HELLO_ELEMENTOR_CHILD_VERSION
 	);
 	wp_enqueue_style('home-style', get_stylesheet_directory_uri() . '/assets/css/home-banner.css');
+	wp_enqueue_style('owl-carousel', get_stylesheet_directory_uri() . '/assets/css/owl.carousel.min.css');
+	wp_enqueue_style('owl-theme', get_stylesheet_directory_uri() . '/assets/css/owl.theme.default.css');
 	wp_enqueue_style( 'aos-style', 'https://unpkg.com/aos@next/dist/aos.css');
 	wp_enqueue_script( 'aos-script', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery-core') );
 	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array('jquery-core'), '1.0.0' );
 	wp_enqueue_script( 'banner-script', get_stylesheet_directory_uri() . '/assets/js/banner-script.js', array(), '1.0.0' );
+	wp_enqueue_script( 'owl-carousel', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.min.js', array(), );
 
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
@@ -63,3 +66,5 @@ function custom_dob_validation($result, $tag) {
 
     return $result;
 }
+
+
