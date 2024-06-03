@@ -13,80 +13,7 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 */
 
 /* Add your custom styles here */
-@font-face {
-  font-family: "New Atten";
-  src: url("assets/fonts/NewAtten-Bold.eot");
-  src: url("assets/fonts/NewAtten-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("assets/fonts/NewAtten-Bold.woff2") format("woff2"),
-    url("assets/fonts/NewAtten-Bold.woff") format("woff"),
-    url("assets/fonts/NewAtten-Bold.ttf") format("truetype"),
-    url("assets/fonts/NewAtten-Bold.svg#NewAtten-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "New Atten";
-  src: url("assets/fonts/NewAtten-Medium.eot");
-  src: url("assets/fonts/NewAtten-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("assets/fonts/NewAtten-Medium.woff2") format("woff2"),
-    url("assets/fonts/NewAtten-Medium.woff") format("woff"),
-    url("assets/fonts/NewAtten-Medium.ttf") format("truetype"),
-    url("assets/fonts/NewAtten-Medium.svg#NewAtten-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "New Atten";
-  src: url("assets/fonts/NewAtten-Regular.eot");
-  src: url("assets/fonts/NewAtten-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("assets/fonts/NewAtten-Regular.woff2") format("woff2"),
-    url("assets/fonts/NewAtten-Regular.woff") format("woff"),
-    url("assets/fonts/NewAtten-Regular.ttf") format("truetype"),
-    url("assets/fonts/NewAtten-Regular.svg#NewAtten-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "New Atten Book";
-  src: url("assets/fonts/NewAtten-Book.eot");
-  src: url("assets/fonts/NewAtten-Book.eot?#iefix")
-      format("embedded-opentype"),
-    url("assets/fonts/NewAtten-Book.woff2") format("woff2"),
-    url("assets/fonts/NewAtten-Book.woff") format("woff"),
-    url("assets/fonts/NewAtten-Book.ttf") format("truetype"),
-    url("assets/fonts/NewAtten-Book.svg#NewAtten-Book") format("svg");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "New Atten";
-  src: url("assets/fonts/NewAtten-RegularItalic.eot");
-  src: url("assets/fonts/NewAtten-RegularItalic.eot?#iefix")
-      format("embedded-opentype"),
-    url("assets/fonts/NewAtten-RegularItalic.woff2") format("woff2"),
-    url("assets/fonts/NewAtten-RegularItalic.woff") format("woff"),
-    url("assets/fonts/NewAtten-RegularItalic.ttf") format("truetype"),
-    url("assets/fonts/NewAtten-RegularItalic.svg#NewAtten-RegularItalic")
-      format("svg");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-body , * {
-  font-family: "New Atten", Sans-serif;
-}
 header.elementor.elementor-location-header .header-main.header-main__bg-blue {
   position: absolute;
   width: 100%;
@@ -274,7 +201,6 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   font-size: 16px;
   line-height: 19px;
   font-weight: 400;
-  font-family: "New Atten", Sans-serif;
 }
 .get-in-touch__form form .get-in-touch__form--main span.wpcf7-form-control-wrap {
   margin: 0 6px 25px;
@@ -316,7 +242,6 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   margin: 0 0 0 auto;
   color: #fff;
   border-color: #fff;
-  font-family: "New Atten", Sans-serif;
 }
 .get-in-touch__form form span.wpcf7-spinner {
   position: absolute;
@@ -358,7 +283,6 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   line-height: 19px;
   padding: 10px 20px;
   font-weight: 400;
-  font-family: "New Atten", Sans-serif;
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input {
   border-radius: 30px;
@@ -402,7 +326,6 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   background: #ff63ae;
   color: #fff;
   border-color: #ff63ae;
-  font-family: "New Atten", Sans-serif;
 }
 .loan-enquiry__form form input[type=submit]:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
@@ -484,6 +407,16 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   background: linear-gradient(0.43deg, rgb(0 0 0 / 60%) 0.38%, rgba(0, 0, 0, 0) 62.53%);
   border-radius: 20px;
 }
+.post-title-link .elementor-widget-container h1 a {
+  color: #251E86;
+  font-family: "New Atten", Sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+}
 .transactions {
   display: flex;
   align-items: end;
@@ -504,7 +437,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   margin: 0;
 }
 .transactions__main--cont-data--title {
-  max-width: 65%;
+  max-width: 60%;
   width: 100%;
   font-family: "New Atten", Sans-serif;
   font-size: 18px;
@@ -513,7 +446,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 
 }
 .transactions__main--cont-data--value {
-  max-width: 35%;
+  max-width: 40%;
   width: 100%;
   font-family: "New Atten", Sans-serif;
   font-size: 18px;
@@ -534,7 +467,6 @@ span.wpcf7-not-valid-tip {
   backdrop-filter: blur(20px);
   color: #fff;
   margin: 0 0 10px;
-  font-family: "New Atten", Sans-serif;
 }
 .contact-us__form-main form span input.wpcf7-not-valid,
 .contact-us__form-main form span select.wpcf7-not-valid,
@@ -574,7 +506,6 @@ span.wpcf7-not-valid-tip {
   background: #FF63AE;
   color: #fff;
   border-color: #FF63AE;
-  font-family: "New Atten", Sans-serif;
 }
 
 .contact-us__form-main form input.contact-us__btn:hover {
@@ -747,13 +678,11 @@ span.wpcf7-not-valid-tip {
 .testimonial__main--item-top-cont ul li a {
   display: block;
 }
-.testimonial__main.owl-carousel .owl-item .testimonial__main--item-top-cont ul li a img{
+.testimonial__main--item-top-cont ul li a img {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50% , -50%);
-  width: auto;
-  height: auto;
 }
 .testimonial__main--item-top-cont p {
   font-size: 18px;
@@ -844,107 +773,16 @@ span.wpcf7-not-valid-tip {
 }
 
 
-.insights__main {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 68px 28px;
-}
-.insights__main .insights__main--box {
-  max-width: calc(33.3333% - 19px);
-  width: 100%;
-}
-.insights__main--box-img img {
-  display: block;
-  width: 100%;
-  min-height: 326px;
-  height: 100%;
-}
-.insights__main--box-cont--title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 0 9px;
-  flex-wrap: wrap;
-}
-.insights__main--box-cont--title h4 {
-  color: #251E86;
-  margin: 0;
-  font-size: 24px;
-  line-height: 28px;
-  font-family: "New Atten", Sans-serif;
-}
-.insights__main--box-img {
-  margin: 0 0 32px;
-}
-.insights__main--box-cont--title span {
-  font-size: 14px;
-  line-height: 18px;
-  color: #656565;
-  font-weight: 400;
-  font-family: "New Atten", Sans-serif;
-}
-.insights__main--box-cont--date {
-  margin: 0 0 15px;
-}
-.insights__main--box-cont--date span {
-  font-size: 14px;
-  line-height: 20px;
-  color: #656565;
-  font-weight: 400;
-  font-family: "New Atten", Sans-serif;
-}
-.insights__main--box-cont--content {
-  margin: 0 0 51px;
-}
-.insights__main--box-cont--content p {
-  font-weight: 500;
-  color: #656565;
-  font-size: 18px;
-  line-height: 22px;
-  font-family: "New Atten", Sans-serif;
-}
-.insights__main--box-cont--link {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #251E86;
-  display: flex;
-  align-items: center;
-  font-family: "New Atten", Sans-serif;
-}
-.insights__main--box-cont--link img {
-  margin: 0 0 0 24px;
-}
-.home-branch__main--inner {
-    backdrop-filter: blur(15px) !important;
-    -webkit-backdrop-filter: blur(15px) !important;
-}
-.elementor-element.insight-articles .elementor-widget-theme-post-featured-image.elementor-widget-image .elementor-widget-container img {
-    min-height: 286px;
-    object-fit: cover;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 10px;
-}
-.elementor-element.homepagebanner {
-    padding: 0 70px 0px !important;
-}
-header.elementor>.elementor-element {
-    padding-left: 70px;
-    padding-right: 70px;
-}
+
 @media (max-width: 1440px) {
   .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
     margin: 0 100px 0 0;
-    margin-left: auto;
   }
 }
 @media (min-width: 992px) {
   .news-slider__item .swiper .swiper-wrapper .swiper-slide-active {
     flex: 2;
   }
-  
 }
 @media (min-width: 1200px) {
   .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a {
@@ -997,52 +835,16 @@ header.elementor>.elementor-element {
   .team__main--inner {
     max-width: calc(100% / 3);
   }
-  .elementor-element.homepagebanner {
-    padding: 0 30px 20px !important;
-  }
-  header.elementor>.elementor-element {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 }
 @media (max-width: 991px) {
-  .insights__main .insights__main--box {
-    max-width: calc(50% - 14px);
-  }
-  .insights__main--box-cont--title h4 {
-    font-size: 20px;
-    line-height: 22px;
-  }
-  .insights__main--box-cont--title {
-    gap: 8px;
-  }
-  .insights__main--box-cont--content {
-    margin: 0 0 31px;
-  }
   .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
     margin: 0;
   }
   .team__main--inner {
     max-width: calc(100% / 2);
   }
-  .elementor-element.homepagebanner {
-    padding: 0 20px 20px !important;
-}
 }
 @media (max-width: 767px) {
-  .insights__main .insights__main--box {
-    max-width: calc(50% - 14px);
-  }
-  .insights__main--box-cont--title h4 {
-    font-size: 18px;
-    line-height: 20px;
-  }
-  .insights__main--box-cont--title {
-    gap: 8px;
-  }
-  .insights__main--box-cont--content {
-    margin: 0 0 31px;
-  }
   .home-branch__main--inner .transactions__main--cont-data--value {
     font-size: 32px;
     line-height: 52px;
@@ -1078,32 +880,9 @@ header.elementor>.elementor-element {
     height: fit-content;
     min-height: 370px;
   }
-header.elementor>.elementor-element {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+
 }
 @media (max-width: 575px) {
-  .insights__main {
-    gap: 48px 28px;
-  }
-  .insights__main .insights__main--box {
-    max-width: 100%;
-  }
-  .insights__main--box-cont--title {
-    gap: 8px;
-  }
-  .insights__main--box-cont--content p {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .insights__main--box-cont--content {
-    margin: 0 0 31px;
-  }
-  .insights__main--box-cont--title h4 {
-    font-size: 18px;
-    line-height: 24px;
-  }
   .home-branch__main--inner .transactions__main--cont-data {
     margin: 0 0 20px;
   }

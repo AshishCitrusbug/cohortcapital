@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
         dots: true,
         margin: 23,
         nav: true,
-        navText: ["<img src='http://18.130.34.80/cohortcapital/wp-content/uploads/2024/05/left-arrow.svg'>", "<img src='http://18.130.34.80/cohortcapital/wp-content/uploads/2024/05/right-arrow.svg'>"],
+        navText: ["<img src='/wp-content/uploads/2024/05/left-arrow.svg'>", "<img src='/wp-content/uploads/2024/05/right-arrow.svg'>"],
         
         responsive: {
           0: {
@@ -177,45 +177,6 @@ jQuery(document).ready(function ($) {
     }, 1000); 
   });
 });
-
-
-jQuery(document).ready(function($) {
-  let typingTimer;
-  let currentRequest = null;
-  const doneTypingInterval = 300;
-
-  jQuery('#searchbox_art input').on('keyup', function() {
-      clearTimeout(typingTimer);
-      const searchQuery = jQuery(this).val().trim();
-
-      if (currentRequest) {
-          currentRequest.abort();
-      }
-
-      if (searchQuery.length === 0) {
-          $("#ajaxcontainercust").load(location.href+" #ajaxcontainercust>*","");
-        } else {
-          typingTimer = setTimeout(function() {
-              currentRequest = jQuery.ajax({
-                  url: ajax_search_params.ajax_url,
-                  type: 'POST',
-                  data: {
-                      action: 'ajax_search',
-                      search_data: searchQuery
-                  },
-                  success: function(data) {
-                      jQuery('#ajaxcontainercust .insights__main').html(data);
-                  },
-                  complete: function() {
-                      currentRequest = null; // Reset the currentRequest when the request is complete
-
-                  }
-              });
-          }, doneTypingInterval);
-      }
-  });
-});
-
 
 
 
