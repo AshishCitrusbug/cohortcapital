@@ -1,4 +1,3 @@
-/wp-content/updraft
 .htaccess
 cohortdemo_db.sql
 index.php
@@ -20,3 +19,7 @@ wp-settings.php
 wp-signup.php
 wp-trackback.php
 xmlrpc.php
+/wp-content/updraft
+/wp-content/plugins/updraftplus
+/wp-content/debug.log
+/msql
