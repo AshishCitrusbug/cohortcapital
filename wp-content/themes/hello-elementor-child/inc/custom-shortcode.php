@@ -280,140 +280,43 @@ function insights_article_search($atts)
     ob_start();
     ?>
 
-    <div class="insights">
-        <div class="insights__main">
-
-            <div class="insights__main--box">
-                <div class="insights__main--box-img">
-                    <img src="/cohortcapital/wp-content/uploads/2024/05/insights-img.png" alt="">
-                </div>
-                <div class="insights__main--box-cont">
-                    <div class="insights__main--box-cont--title">
-                        <h4>Discover the neighbourhood</h4>
-                        <span>2 min read</span>
+    <div class="insights" id="ajaxcontainercust">
+        <div class="insights__main"> 
+            <?php
+            $args = array(
+                'post_type' => 'article',
+                'posts_per_page' => -1,
+                'post_status' => 'publish',
+                'order' => 'DESC',
+            );
+            
+            $query = new WP_Query($args);
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post(); ?>
+                    <div class="insights__main--box">
+                        <div class="insights__main--box-img">
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                        </div>
+                        <div class="insights__main--box-cont">
+                            <div class="insights__main--box-cont--title">
+                                <h4><?php echo get_the_title(); ?></h4>
+                                <span>2 min read</span>
+                            </div>
+                            <div class="insights__main--box-cont--date">
+                                <span><?php echo get_the_date(); ?>, by <?php echo get_the_author(); ?></span>
+                            </div>
+                            <div class="insights__main--box-cont--content">
+                                <p><?php echo get_the_excerpt(); ?></p>
+                            </div>
+                            <a href="<?php echo get_the_permalink(); ?>" class="insights__main--box-cont--link">
+                                Read Article
+                                <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
+                            </a>
+                        </div>
                     </div>
-                    <div class="insights__main--box-cont--date">
-                        <span>03 May 2024, by Author name</span>
-                    </div>
-                    <div class="insights__main--box-cont--content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    </div>
-                    <a href="#" class="insights__main--box-cont--link">
-                        Read Article
-                        <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="insights__main--box">
-                <div class="insights__main--box-img">
-                    <img src="/cohortcapital/wp-content/uploads/2024/05/insights-img.png" alt="">
-                </div>
-                <div class="insights__main--box-cont">
-                    <div class="insights__main--box-cont--title">
-                        <h4>Discover the neighbourhood</h4>
-                        <span>2 min read</span>
-                    </div>
-                    <div class="insights__main--box-cont--date">
-                        <span>03 May 2024, by Author name</span>
-                    </div>
-                    <div class="insights__main--box-cont--content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    </div>
-                    <a href="#" class="insights__main--box-cont--link">
-                        Read Article
-                        <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="insights__main--box">
-                <div class="insights__main--box-img">
-                    <img src="/cohortcapital/wp-content/uploads/2024/05/insights-img.png" alt="">
-                </div>
-                <div class="insights__main--box-cont">
-                    <div class="insights__main--box-cont--title">
-                        <h4>Discover the neighbourhood</h4>
-                        <span>2 min read</span>
-                    </div>
-                    <div class="insights__main--box-cont--date">
-                        <span>03 May 2024, by Author name</span>
-                    </div>
-                    <div class="insights__main--box-cont--content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    </div>
-                    <a href="#" class="insights__main--box-cont--link">
-                        Read Article
-                        <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="insights__main--box">
-                <div class="insights__main--box-img">
-                    <img src="/cohortcapital/wp-content/uploads/2024/05/insights-img.png" alt="">
-                </div>
-                <div class="insights__main--box-cont">
-                    <div class="insights__main--box-cont--title">
-                        <h4>Discover the neighbourhood</h4>
-                        <span>2 min read</span>
-                    </div>
-                    <div class="insights__main--box-cont--date">
-                        <span>03 May 2024, by Author name</span>
-                    </div>
-                    <div class="insights__main--box-cont--content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    </div>
-                    <a href="#" class="insights__main--box-cont--link">
-                        Read Article
-                        <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="insights__main--box">
-                <div class="insights__main--box-img">
-                    <img src="/cohortcapital/wp-content/uploads/2024/05/insights-img.png" alt="">
-                </div>
-                <div class="insights__main--box-cont">
-                    <div class="insights__main--box-cont--title">
-                        <h4>Discover the neighbourhood</h4>
-                        <span>2 min read</span>
-                    </div>
-                    <div class="insights__main--box-cont--date">
-                        <span>03 May 2024, by Author name</span>
-                    </div>
-                    <div class="insights__main--box-cont--content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    </div>
-                    <a href="#" class="insights__main--box-cont--link">
-                        Read Article
-                        <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
-                    </a>
-                </div>
-            </div>
-
-            <div class="insights__main--box">
-                <div class="insights__main--box-img">
-                    <img src="/cohortcapital/wp-content/uploads/2024/05/insights-img.png" alt="">
-                </div>
-                <div class="insights__main--box-cont">
-                    <div class="insights__main--box-cont--title">
-                        <h4>Discover the neighbourhood</h4>
-                        <span>2 min read</span>
-                    </div>
-                    <div class="insights__main--box-cont--date">
-                        <span>03 May 2024, by Author name</span>
-                    </div>
-                    <div class="insights__main--box-cont--content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                    </div>
-                    <a href="#" class="insights__main--box-cont--link">
-                        Read Article
-                        <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
-                    </a>
-                </div>
-            </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
         </div>
     </div>
 

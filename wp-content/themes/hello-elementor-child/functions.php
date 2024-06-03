@@ -40,6 +40,11 @@ function hello_elementor_child_scripts_styles() {
 	wp_enqueue_script( 'banner-script', get_stylesheet_directory_uri() . '/assets/js/banner-script.js', array(), '1.0.0' );
 	wp_enqueue_script( 'owl-carousel', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.min.js', array(), );
 
+	// Localize script to pass AJAX URL
+    wp_localize_script('custom', 'ajax_search_params', array(
+        'ajax_url' => admin_url('admin-ajax.php')
+    ));
+
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
 
@@ -67,4 +72,55 @@ function custom_dob_validation($result, $tag) {
     return $result;
 }
 
+
+// AJAX handler function
+function ajax_search() {
+    $query_data = isset($_POST['search_data']) ? sanitize_text_field($_POST['search_data']) : '';
+
+    $args = array(
+        'post_type' => 'article',
+        's' => $query_data,
+        'posts_per_page' => 10,
+        'post_status' => 'publish',
+    );
+
+    $search_query = new WP_Query($args);
+
+    if ($search_query->have_posts()) {
+        while ($search_query->have_posts()) {
+            $search_query->the_post();
+            ?>
+            <div class="insights__main--box">
+                <div class="insights__main--box-img">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                </div>
+                <div class="insights__main--box-cont">
+                    <div class="insights__main--box-cont--title">
+                        <h4><?php the_title(); ?></h4>
+                        <span>2 min read</span>
+                    </div>
+                    <div class="insights__main--box-cont--date">
+                        <span><?php the_date(); ?>, by <?php the_author(); ?></span>
+                    </div>
+                    <div class="insights__main--box-cont--content">
+                        <p><?php the_excerpt(); ?></p>
+                    </div>
+                    <a href="<?php the_permalink(); ?>" class="insights__main--box-cont--link">
+                        Read Article
+                        <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <?php
+        }
+    } else {
+        echo '<p>No results found</p>';
+    }
+
+    wp_reset_postdata();
+    die();
+}
+
+add_action('wp_ajax_nopriv_ajax_search', 'ajax_search');
+add_action('wp_ajax_ajax_search', 'ajax_search');
 
