@@ -278,21 +278,23 @@ add_shortcode('testimonial_home_page_section', 'testimonial_home_page');
 function insights_article_search($atts)
 {
     ob_start();
-    ?>
 
-    <div class="insights" id="ajaxcontainercust">
-        <div class="insights__main"> 
-            <?php
-            $args = array(
-                'post_type' => 'article',
-                'posts_per_page' => -1,
-                'post_status' => 'publish',
-                'order' => 'DESC',
-            );
-            
-            $query = new WP_Query($args);
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post(); ?>
+    $args = array(
+        'post_type' => 'article',
+        'posts_per_page' => -1,
+        'post_status' => 'publish',
+        'order' => 'DESC',
+    );
+    
+    $insights_query = new WP_Query($args);
+    if ($insights_query->have_posts()) {
+
+    ?>
+        <div class="insights" id="ajaxcontainercust">
+            <div class="insights__main"> 
+                <?php
+                while ($insights_query->have_posts()) : $insights_query->the_post(); 
+                ?>
                     <div class="insights__main--box">
                         <div class="insights__main--box-img">
                             <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
@@ -315,12 +317,12 @@ function insights_article_search($atts)
                         </div>
                     </div>
                 <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+            </div>
         </div>
-    </div>
+   <?php }
 
-<?php
+    wp_reset_postdata();
+
     return ob_get_clean();
 }
 
