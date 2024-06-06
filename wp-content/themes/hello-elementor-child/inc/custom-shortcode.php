@@ -77,38 +77,61 @@ function transactions_field_loop()
 
 
 ?>
-
-    <div class="transactions">
-        <div class="transactions__main">
-            <div class="transactions__title">
-                <h4><?php the_title(); ?></h4>
-            </div>
-            <div class="transactions__main--cont">
-                <?php if (!empty($loan)) { ?>
-                    <div class="transactions__main--cont-data">
-                        <span class="transactions__main--cont-data--title">Loan:</span>
-                        <span class="transactions__main--cont-data--value"><?php echo $loan_num; ?> <span><?php echo $loan; ?></span></span>
-                    </div>
-                <?php }; ?>
-                <?php if (!empty($term_outstanding)) { ?>
-                    <div class="transactions__main--cont-data">
-                        <span class="transactions__main--cont-data--title">Term:</span>
-                        <span class="transactions__main--cont-data--value"><?php echo $term_outstanding_num; ?><span><?php echo $term_outstanding; ?></span></span>
-                    </div>
-                <?php } ?>
-                <?php if (!empty($ltv)) { ?>
-                    <div class="transactions__main--cont-data">
-                        <span class="transactions__main--cont-data--title">LTV:</span>
-                        <span class="transactions__main--cont-data--value"><?php echo $ltv_num; ?><span><?php echo $ltv; ?></span></span>
-                    </div>
-                <?php } ?>
-            </div>
+<div class="transactions">
+    <div class="transactions__main">
+        <div class="transactions__title">
+            <h4><?php the_title(); ?></h4>
         </div>
-        <div class="transactions__main--arrow">
-            <a href="<?php echo get_permalink(); ?>"> <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/trans-arrow.svg'); ?>" alt="trans-arrow">
-            </a>
+        <?php if(is_front_page()){ ?>
+        <div class="transactions__main--cont">
+            <?php if (!empty($loan)) { ?>
+            <div class="transactions__main--cont-data">
+                <span class="transactions__main--cont-data--title">Loan</span>
+                <span class="transactions__main--cont-data--value"><?php echo $loan_num; ?> <span><?php echo $loan; ?></span></span>
+            </div>
+            <?php }; ?>
+            <?php if (!empty($term_outstanding)) { ?>
+            <div class="transactions__main--cont-data">
+                <span class="transactions__main--cont-data--title">Term</span>
+                <span class="transactions__main--cont-data--value"><?php echo $term_outstanding_num; ?><span><?php echo $term_outstanding; ?></span></span>
+            </div>
+            <?php } ?>
+            <?php if (!empty($ltv)) { ?>
+            <div class="transactions__main--cont-data">
+                <span class="transactions__main--cont-data--title">LTV</span>
+                <span class="transactions__main--cont-data--value"><?php echo $ltv_num; ?><span><?php echo $ltv; ?></span></span>
+            </div>
+            <?php } ?>
         </div>
+        <?php } else { ?>
+        <div class="transactions__main--cont">
+            <?php if (!empty($loan)) { ?>
+            <div class="transactions__main--cont-data">
+                <span class="transactions__main--cont-data--title">Loan:</span>
+                <span class="transactions__main--cont-data--value"><?php echo $loan_num; ?> <span><?php echo $loan; ?></span></span>
+            </div>
+            <?php }; ?>
+            <?php if (!empty($term_outstanding)) { ?>
+            <div class="transactions__main--cont-data">
+                <span class="transactions__main--cont-data--title">Term:</span>
+                <span class="transactions__main--cont-data--value"><?php echo $term_outstanding_num; ?><span><?php echo $term_outstanding; ?></span></span>
+            </div>
+            <?php } ?>
+            <?php if (!empty($ltv)) { ?>
+            <div class="transactions__main--cont-data">
+                <span class="transactions__main--cont-data--title">LTV:</span>
+                <span class="transactions__main--cont-data--value"><?php echo $ltv_num; ?><span><?php echo $ltv; ?></span></span>
+            </div>
+            <?php } ?>
+        </div>
+        <?php } ?>
     </div>
+    <div class="transactions__main--arrow">
+        <a href="<?php echo get_permalink(); ?>">
+            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/trans-arrow.svg'); ?>" alt="trans-arrow">
+        </a>
+    </div>
+</div>
 
     <?php
 
@@ -274,53 +297,58 @@ function testimonial_home_page($atts)
 add_shortcode('testimonial_home_page_section', 'testimonial_home_page');
 
 /* Insights search articles section */
-
 function insights_article_search($atts)
 {
     ob_start();
-    ?>
 
-    <div class="insights" id="ajaxcontainercust">
-        <div class="insights__main"> 
-            <?php
-            $args = array(
-                'post_type' => 'article',
-                'posts_per_page' => -1,
-                'post_status' => 'publish',
-                'order' => 'DESC',
-            );
-            
-            $query = new WP_Query($args);
-            if ($query->have_posts()) :
-                while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="insights__main--box">
-                        <div class="insights__main--box-img">
-                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
-                        </div>
-                        <div class="insights__main--box-cont">
-                            <div class="insights__main--box-cont--title">
-                                <h4><?php echo get_the_title(); ?></h4>
-                                <span>2 min read</span>
-                            </div>
-                            <div class="insights__main--box-cont--date">
-                                <span><?php echo get_the_date(); ?>, by <?php echo get_the_author(); ?></span>
-                            </div>
-                            <div class="insights__main--box-cont--content">
-                                <p><?php echo get_the_excerpt(); ?></p>
-                            </div>
-                            <a href="<?php echo get_the_permalink(); ?>" class="insights__main--box-cont--link">
-                                Read Article
-                                <img src="/cohortcapital/wp-content/uploads/2024/05/post-arrow.svg" alt="">
-                            </a>
-                        </div>
+    $args = array(
+        'post_type'      => 'article',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+        'order'          => 'DESC',
+    );
+    
+    $insights_query = new WP_Query($args);
+    if ($insights_query->have_posts()) : ?>
+
+        <?php
+        $insights_output = '<div class="insights" id="ajaxcontainercust">
+            <div class="insights__main"> ';
+    
+        while ($insights_query->have_posts()) : $insights_query->the_post();    
+    
+        $insights_output .= '<div class="insights__main--box">
+                <div class="insights__main--box-img" style = "max-width:460px; height: 350px" >
+                    <img src="' . get_the_post_thumbnail_url() . '" alt="">
+                </div>
+                <div class="insights__main--box-cont">
+                    <div class="insights__main--box-cont--title">
+                        <h4>' . get_the_title() . '</h4>
+                        <span>2 min read</span>
                     </div>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
-        </div>
-    </div>
-
-<?php
+                    <div class="insights__main--box-cont--date">
+                        <span>' . get_the_date() . ', by ' . get_the_author() . '</span>
+                    </div>
+                    <div class="insights__main--box-cont--content">
+                        <p>' . get_the_excerpt() . '</p>
+                    </div>
+                    <a href="' . get_the_permalink() . '" class="insights__main--box-cont--link">
+                        Read Article
+                    <img src="' . esc_url(get_stylesheet_directory_uri() . '/assets/images/post-arrow.svg') . '" alt="">
+                    </a>
+                </div>
+            </div>';
+    
+        endwhile;
+    
+        $insights_output .= '</div>
+        </div>';
+    
+        wp_reset_postdata();
+    
+        return $insights_output;
+    
+    endif;
     return ob_get_clean();
 }
 

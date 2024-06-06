@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
-  AOS.init()
+  AOS.init({
+    anchorPlacement: 'top-bottom',
+  });
   $(window).scroll(function() {
     if($(window).scrollTop() > 50){
       $('.header-main').addClass('header-sticky');
@@ -7,7 +9,7 @@ jQuery(document).ready(function ($) {
       $('.header-main').removeClass('header-sticky');
     }
   });
-
+  
   var lastScrollTop = 0;
   $(window).scroll(function(event){
     var st = $(this).scrollTop();
@@ -39,7 +41,10 @@ jQuery(document).ready(function ($) {
         dots: true,
         margin: 23,
         nav: true,
-        navText: ["<img src='http://18.130.34.80/cohortcapital/wp-content/uploads/2024/05/left-arrow.svg'>", "<img src='http://18.130.34.80/cohortcapital/wp-content/uploads/2024/05/right-arrow.svg'>"],
+        navText: [
+          "<img src='" + document.location.origin + "/wp-content/uploads/2024/05/left-arrow.svg' alt='Previous'>",
+          "<img src='" + document.location.origin + "/wp-content/uploads/2024/05/right-arrow.svg' alt='Next'>"
+        ],
         
         responsive: {
           0: {
@@ -180,11 +185,13 @@ jQuery(document).ready(function ($) {
 
 
 jQuery(document).ready(function($) {
+  $('.elementor-search-form__submit').on('click', function(e){ e.preventDefault(); })
   let typingTimer;
   let currentRequest = null;
   const doneTypingInterval = 300;
 
   jQuery('#searchbox_art input').on('keyup', function() {
+      
       clearTimeout(typingTimer);
       const searchQuery = jQuery(this).val().trim();
 
@@ -217,7 +224,63 @@ jQuery(document).ready(function($) {
 });
 
 
+/* ====================== Home page transactions post add Counter ========================================================= */
+jQuery(document).ready(function($) {
+  // Function to check if element is in viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
+  // Function to handle scroll event
+  function handleScroll() {
+    $('.home-branch__main .transactions__main--cont-data--value').each(function () {
+        var $this = $(this);
+        if (isElementInViewport(this) && !$this.data('animated')) {
+            var originalText = $this.text();
+            var decimalIndex = originalText.indexOf('.');
+            var size = decimalIndex >= 0 ? originalText.length - decimalIndex - 1 : 0;
 
+            // Extract the numeric part of the text, including the sign
+            var originalNumber = parseFloat(originalText.replace(/[^0-9.+-]/g, '')) || 0;
 
+            // Check if originalText has any non-numeric characters at the start or end
+            var prefix = originalText.match(/^[^0-9.+-]*/)[0];
+            var suffix = originalText.match(/[^0-9.+-]*$/)[0];
+
+            $this.prop('Counter', 0).animate({
+                Counter: originalNumber
+            }, {
+                duration: 2000,
+                step: function (now) {
+                    var formattedNumber;
+                    if (size > 0) {
+                        formattedNumber = now.toFixed(size).replace(/\.?0+$/, ''); // Remove trailing zeros
+                    } else {
+                        formattedNumber = Math.round(now); // Round to nearest integer if no decimal part
+                    }
+                    // Reconstruct the original string with prefix and suffix
+                    $this.text(prefix + formattedNumber + suffix);
+                }
+            });
+            // Set data attribute to mark element as animated
+            $this.data('animated', true);
+        }
+    });
+  }
+
+  // Attach scroll event listener
+  $(window).on('scroll', handleScroll);
+
+  // Initial check on page load
+  $(document).ready(function () {
+    handleScroll();
+  });
+
+});
 
