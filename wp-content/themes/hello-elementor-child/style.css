@@ -1004,6 +1004,9 @@ span.wpcf7-not-valid-tip {
 .insights__main--box-cont--link img {
   margin: 0 0 0 24px;
 }
+input.elementor-search-form__input::-webkit-search-cancel-button {
+  display: none;
+}
 .home-branch__main--inner {
     backdrop-filter: blur(15px) !important;
     -webkit-backdrop-filter: blur(15px) !important;
@@ -1280,6 +1283,40 @@ header.elementor>.elementor-element {
 .elementor.elementor .top-footer .e-con>.elementor-widget {
     width: 100%;
 }
+.elementor-3028 .elementor-element.elementor-element-dd9a57c > .elementor-widget-container,
+.elementor-3028 .elementor-element.elementor-element-32dbfd9 > .elementor-widget-container{
+  overflow: auto;
+}
+.page-id-3028 table{
+  width: 100%;
+}
+.loan-enquiry__form--main>span {
+    margin: 0 0 6px 11px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+.insights__main--box-img {
+    width: 100% !important;
+    min-height: auto !important;
+}
+.loan-enquiry__form--main {
+    display: flex;
+    flex-direction: column;
+}
+.loan-enquiry__form--main span.wpcf7-not-valid-tip {
+    color: #dc3232;
+}
+.loan-enquiry__form--main>span {
+    order: 3;
+}
+.loan-enquiry__form form .loan-enquiry__form--main label {
+    order: 1;
+}
+.loan-enquiry__form--main span.wpcf7-form-control-wrap {
+    order: 2;
+}
 
 @media (max-width: 768px){
   .elementor-2251 .elementor-element.elementor-element-bb8a7a9 {
@@ -1296,5 +1333,32 @@ header.elementor>.elementor-element {
   }
   .elementor-2251 .elementor-element.elementor-element-935a562 img{
     height: auto;
+  }
+  .elementor-210 .elementor-element.elementor-element-059ddd5 .elementor-heading-title{
+    font-size: 22px;
+  }
+  .elementor-3214 .elementor-element.elementor-element-1dabd4c .elementor-heading-title,
+  .elementor-3028 .elementor-element.elementor-element-b8d8d7f .elementor-heading-title,
+  .elementor-3028 .elementor-element.elementor-element-7d70830 .elementor-heading-title,
+  .page-id-3028 h3,
+  .page-id-3214 h3{
+    font-size: 22px !important;
+    line-height: 32px !important;
+  }
+  .page-id-3214 p, .elementor-3028 p, .elementor-3028 li {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .insights__main--box-img {
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+}
+}
+
+@media (max-width: 575px){
+
+  .insights__main--box-img img{
+    min-height: auto;
   }
 }

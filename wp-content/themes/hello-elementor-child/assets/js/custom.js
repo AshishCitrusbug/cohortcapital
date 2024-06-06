@@ -41,7 +41,10 @@ jQuery(document).ready(function ($) {
         dots: true,
         margin: 23,
         nav: true,
-        navText: ["<img src='http://18.130.34.80/cohortcapital/wp-content/uploads/2024/05/left-arrow.svg'>", "<img src='http://18.130.34.80/cohortcapital/wp-content/uploads/2024/05/right-arrow.svg'>"],
+        navText: [
+          "<img src='" + document.location.origin + "/wp-content/uploads/2024/05/left-arrow.svg' alt='Previous'>",
+          "<img src='" + document.location.origin + "/wp-content/uploads/2024/05/right-arrow.svg' alt='Next'>"
+        ],
         
         responsive: {
           0: {
@@ -255,7 +258,12 @@ jQuery(document).ready(function($) {
             }, {
                 duration: 2000,
                 step: function (now) {
-                    var formattedNumber = now.toFixed(size).replace(/\.?0+$/, ''); // Remove trailing zeros
+                    var formattedNumber;
+                    if (size > 0) {
+                        formattedNumber = now.toFixed(size).replace(/\.?0+$/, ''); // Remove trailing zeros
+                    } else {
+                        formattedNumber = Math.round(now); // Round to nearest integer if no decimal part
+                    }
                     // Reconstruct the original string with prefix and suffix
                     $this.text(prefix + formattedNumber + suffix);
                 }
@@ -275,3 +283,4 @@ jQuery(document).ready(function($) {
   });
 
 });
+
