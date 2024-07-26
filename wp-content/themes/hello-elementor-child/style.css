@@ -70,7 +70,7 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 }
 
 @font-face {
-  font-family: "New Atten";
+  font-family: "New Atten";=
   src: url("assets/fonts/NewAtten-RegularItalic.eot");
   src: url("assets/fonts/NewAtten-RegularItalic.eot?#iefix")
       format("embedded-opentype"),
@@ -221,7 +221,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  justify-content: space-between;
+  row-gap: 40px;
   height: 100%;
   background: #656565;
   padding: 30px;
@@ -254,7 +254,8 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 .team__main--inner-img img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 330px;
+  border-radius: 10px;
 }
 .team__main--inner-author h4 {
   margin: 0 0 5px;
@@ -266,6 +267,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   font-weight: 300;
   color: #252A6B;
   font-family: 'New Atten Round';
+  word-wrap: break-word;
 }
 .team__main--inner-main {
   position: relative;
@@ -308,6 +310,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   font-size: 16px;
   line-height: 19px;
   color: #fff;
+  word-wrap: break-word;
 }
 .get-in-touch__form form .get-in-touch__form--main {
   display:flex;
@@ -335,6 +338,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 }
 .get-in-touch__form form .get-in-touch__form--main span .wpcf7-not-valid-tip {
   margin: 0;
+
 }
 .get-in-touch__form .wpcf7 form.sent .wpcf7-response-output {
   color: #fff;
@@ -417,21 +421,41 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   text-align: center;
   margin: 20px 0 0;
 }
+.loan-enquiry_information h3 {
+  color: rgba(173, 170, 170, 1);
+  padding: 16px 77px 15px 47px;
+  border-bottom: 1px solid #F1EFEF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  margin: 0px 0px 30px;
+}
+.loan-enquiry_information {
+  border-radius: 10px;
+  box-shadow: 2px 0px 15px 0px #00000026;
+  background-color: #ffffff;
+  padding-bottom: 48px;
+  margin-bottom: 15px;
+}
 .loan-enquiry__form form .loan-enquiry__form--main {
-  margin: 0 0 25px;
+  margin: 0 0 20px;
+  padding: 0px 77px 0px 47px;
   /* overflow: hidden; */
 }
 .loan-enquiry__form form .loan-enquiry__form--main label {
   margin: 0 0 6px 11px;
-  color: #fff;
+  color: #252A6B;
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
 }
+.loan-enquiry__form form .loan-enquiry__form--main label .loan-required {
+  font-size: 14px;
+}
 .loan-enquiry__form form .loan-enquiry__form--main span input,
 .loan-enquiry__form form .loan-enquiry__form--main span textarea {
-  border-color: transparent;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  /* border-color: transparent; */
+  /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)); */
   border-radius: 5px;
   color: #fff;
   font-size: 16px;
@@ -439,7 +463,18 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   padding: 10px 20px;
   font-weight: 400;
   font-family: 'New Atten Round';
+  background: #ffffff;
+  border: 1px solid #252A6B;
+  color: #252A6B;
+  display: block;
 }
+/* .loan-enquiry__form form .loan-enquiry__form--main span input[type="date"] {
+  color: #ADAAAA;
+} */
+.loan-enquiry__form form .loan-enquiry__form--main span input[type="date"] {
+  color: #252A6B;
+}
+
 .loan-enquiry__form form .loan-enquiry__form--main span input {
   border-radius: 30px;
 }
@@ -448,27 +483,52 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input::placeholder,
 .loan-enquiry__form form .loan-enquiry__form--main span textarea::placeholder {
-  color: #fff; 
+  color: #ADAAAA; 
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input:focus,
 .loan-enquiry__form form .loan-enquiry__form--main span textarea:focus {
   outline: none;
 }
 .loan-enquiry__form form .loan-enquiry__form--main span + span {
-  color: #fff;
-  margin: 10px 0 0 11px;
   display: block;
 }
-.loan-enquiry__form form .loan-enquiry__form--main span input[type=date] {
-  color: #fff;
+.loan-enquiry__form--main>span.loan-info {
+  color: #252A6B;
+  padding-left: 11px;
+  padding-top: 8px;
 }
+.loan-enquiry__form form .loan-enquiry__form--main.form-textarea {
+  position: relative;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.form-textarea .wpcf7-character-count {
+  position: absolute;
+  bottom: 13px;
+  right: 90px;
+  z-index: 1;
+  color: #ADAAAA;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.form-textarea .wpcf7-not-valid-tip {
+  position: absolute;
+  left: 0px;
+  top: 100%;
+}
+.loan-enquiry__form form .loan-enquiry__form--main .wpcf7-not-valid-tip {
+  padding-left: 11px;
+  margin-top: 5px;
+  display: inline-block !important;
+}
+/* .loan-enquiry__form form .loan-enquiry__form--main span input[type=date] {
+  color: #ADAAAA;
+} */
 .loan-enquiry__form form .loan-enquiry__form--main span input::placeholder {
-  color: #fff;
+  color: #ADAAAA;
 }
 .loan-enquiry__form form .loan-enquiry__form--main span input[type=date]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  opacity: 1;
+  /* filter: invert(1);
+  opacity: 1; */
+  /* color: rgba(37, 42, 107, 1) !important; */
 }
+
 .loan-enquiry__form form .loan-enquiry__form--main .flag-container ul.country-list li.country {
   display: flex;
   align-items: center;
@@ -477,36 +537,40 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
   margin: 0 0 0 10px;
 }
 .loan-enquiry__form form input[type=submit] {
-  margin: 25px 0 0;
+  margin: 45px 0 0;
   display: block;
-  background: #ff63ae;
-  color: #fff;
-  border-color: #ff63ae;
+  background: #F1EFEF;
+  color: #656565;
+  border-color: #F1EFEF;
   font-family: 'New Atten Round';
-}
-.loan-enquiry__form form input[type=submit]:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  color: #fff;
-  border-color: rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  text-shadow: none;
+  line-height: 19px;
 }
 .loan-enquiry__form form input[type=submit]:focus {
   outline: none;
 }
+.loan-enquiry__form form .wpcf7-spinner {
+  display: none;
+}
 .loan-enquiry__form form.invalid .wpcf7-response-output {
   border-color: red;
-  color: #fff;
+  /* color: #fff; */
   padding: 10px 5px;
   text-align: center;
 }
 .loan-enquiry__form form .loan-enquiry__form--main.radio-main label {
   margin: 0;
 }
-.loan-enquiry__form form .loan-enquiry__form--main.radio-main {
+/* .loan-enquiry__form form .loan-enquiry__form--main.radio-main {
   margin: 0 0 25px 34px;
-}
+} */
 .loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button .wpcf7-list-item {
   margin: 0 0 8px;
   display: block;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button label {
+  font-size: 16px;
 }
 .loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button .wpcf7-list-item:last-child {
   margin: 0;
@@ -523,13 +587,15 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 .loan-enquiry__form form .loan-enquiry__form--main.radio-main .main-label {
   margin: 0 0 19px;
 }
-.loan-enquiry__form form {
-  height:700px;
-  overflow-y:auto;
-  padding-right: 10px;
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button {
+  order: 2;
+  padding-left: 8px;
+}
+.loan-enquiry__form form .loan-enquiry__form--main.radio-main .radio-button input {
+  accent-color: #252A6B;
 }
 .loan-enquiry__form form .wpcf7-response-output {
-  color: #fff;
+  /* color: #fff; */
   text-align: center;
 }
 .loan-enquiry__form form::-webkit-scrollbar {
@@ -594,7 +660,8 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 }
 .transactions__main--cont-data--value {
   max-width: 36%;
-  width: 100%;
+/*  width: 100%;*/
+/* width: 200px; */
   font-family: 'New Atten Round';
   font-size: 18px;
   font-weight: 500;
@@ -603,6 +670,7 @@ header.elementor.elementor-location-header .header-main.white-header.header-stic
 span.transactions__main--cont-data--value span {
   padding-left: 1px;
 }
+
 .elementor-search-form__submit{ 
   cursor: unset !important;
 }
@@ -747,16 +815,41 @@ span.wpcf7-not-valid-tip {
 }
 .home-branch__main--inner  .transactions__main--cont-data--value {
   max-width: 100%;
-  font-size: 42px;
+  font-size: 40px;
   line-height: 72px;
   font-weight: 500;
   font-family: 'New Atten Round';
+  display: flex;
+  align-items: center;
 }
 .home-branch__main--inner .transactions__main--cont-data {
   flex-direction: column-reverse;
   margin: 0;
   width: auto;
 }
+.home-branch__main--inner .transactions__main--cont-data span.transactions-counter {
+    max-width: 46px;
+    min-width: 46px;
+    display: inline-block;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+.home-branch__main--inner .transactions__main--cont-data:first-child span.transactions-counter {
+    max-width: 70px;
+    min-width: 70px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+.home-branch__main--inner .transactions__main--cont-data:first-child span.transactions-counter.decimal-point {
+  max-width: 75px;
+  min-width: 75px;
+}
+
+
 .accordion__main .elementor-accordion-item .elementor-tab-content {
   border: 0;
 }
@@ -862,6 +955,7 @@ span.wpcf7-not-valid-tip {
   height: 178px;
   width: 178px;
   border-radius: 50%;
+  object-fit: cover;
 }
 .testimonial__main--item-top-auth h4 {
   font-family:'New Atten Round';
@@ -937,9 +1031,21 @@ span.wpcf7-not-valid-tip {
   flex-wrap: wrap;
   gap: 68px 28px;
 }
+/* .insights__main .insights__main--box {
+  max-width: calc(33.3333% - 19px);
+  width: 100%;
+} */
+.insights__main--box-cont {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .insights__main .insights__main--box {
   max-width: calc(33.3333% - 19px);
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .insights__main--box-img img {
   display: block;
@@ -947,6 +1053,8 @@ span.wpcf7-not-valid-tip {
   min-height: 326px;
   height: 100%;
   border-radius: 10px;
+  object-fit: cover;
+  object-position: top;
 }
 .insights__main--box-cont--title {
   display: flex;
@@ -965,6 +1073,10 @@ span.wpcf7-not-valid-tip {
 .insights__main--box-img {
   margin: 0 0 32px;
 }
+h1.elementor-heading-title{
+  font-family: 'New Atten Round';
+}
+
 .insights__main--box-cont--title span {
   font-size: 14px;
   line-height: 18px;
@@ -1025,17 +1137,27 @@ header.elementor>.elementor-element {
     padding-left: 70px;
     padding-right: 70px;
 }
+.elementor-element.elementor-element-fcc971c.post-excerpt.elementor-widget.elementor-widget-theme-post-excerpt .elementor-widget-container {
+  height: 112px;
+}
+.loan_enquiry_main {
+  position: relative;
+}
+
+.elementor-246 .laon-enquiry-banner {
+  top: 0;
+  position:sticky;
+  z-index: 99;
+}
+.loan-enquiry__form {
+  z-index: 99;
+}
+
 @media (max-width: 1440px) {
   .post-loop .elementor-loop-container .transaction.type-transaction:nth-last-of-type(2) .home-branch .home-branch__main .home-branch__main--inner {
     margin: 0 100px 0 0;
     margin-left: auto;
   }
-}
-@media (min-width: 992px) {
-  .news-slider__item .swiper .swiper-wrapper .swiper-slide-active {
-    flex: 2;
-  }
-  
 }
 @media (min-width: 1200px) {
   .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu a {
@@ -1076,6 +1198,9 @@ header.elementor>.elementor-element {
   }
   .header__menu--list .elementor-nav-menu--main ul li.header-loan-menu {
     margin: 0 0 0 100px;
+  }
+  .elementor-95 .elementor-element.elementor-element-44798d1 {
+    padding-left: 80px;
   }
 }
 @media (max-width: 1199px) {
@@ -1122,8 +1247,28 @@ header.elementor>.elementor-element {
   .single-article .elementor.elementor .e-con>.elementor-widget{
     margin-top: 10px;
   }
+  /* .elementor-element.elementor-element-fcc971c.post-excerpt.elementor-widget.elementor-widget-theme-post-excerpt {
+    height: 112px !important;
+  } */
 }
 @media (max-width: 767px) {
+  .transactions__main--cont-data--title {
+    max-width: 100%;
+    width: 200px;
+  }
+  .elementor-95 .elementor-element.elementor-element-51821e3,
+  .elementor-282 .elementor-element.elementor-element-2485953{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .transactions__main--cont-data--value{
+    max-width: 100%;
+    width: 100%;
+  }
+  .team__main--inner-over--author {
+    margin-top: 20px;
+    display: none;
+  }
   .insights__main .insights__main--box {
     max-width: calc(50% - 14px);
   }
@@ -1176,6 +1321,9 @@ header.elementor>.elementor-element {
     padding-left: 15px;
     padding-right: 15px;
 }
+.elementor-element.elementor-element-fcc971c.post-excerpt.elementor-widget.elementor-widget-theme-post-excerpt .elementor-widget-container {
+  height: auto;
+}
 }
 @media (max-width: 575px) {
   .insights__main {
@@ -1214,10 +1362,6 @@ header.elementor>.elementor-element {
   .team__main--inner-over {
     min-height: auto;
   }
-  .team__main--inner-over--author {
-    margin-top: 20px;
-  }
-  
 }
 @media (min-width: 767px) and (max-width: 1199px) { 
   .elementor-nav-menu--toggle .elementor-menu-toggle.elementor-active+.elementor-nav-menu__container {
@@ -1269,7 +1413,23 @@ header.elementor>.elementor-element {
     line-height: 22px;
     color: #251E86;
     font-family: 'New Atten Round';
+    margin-top: auto;
 }
+.post-excerpt .elementor-widget-container {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.insight_related_heading h1.elementor-heading-title.elementor-size-default {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #ajaxcontainercust .insights__main{
       align-items: stretch;
 }
@@ -1291,12 +1451,12 @@ header.elementor>.elementor-element {
   width: 100%;
 }
 .loan-enquiry__form--main>span {
-    margin: 0 0 6px 11px;
-    color: #fff;
-    font-size: 18px;
-    line-height: 21px;
+    color: #252A6B;
+    font-size: 14px;
+    line-height: 16px;
     font-weight: 400;
 }
+
 .insights__main--box-img {
     width: 100% !important;
     min-height: auto !important;
@@ -1317,6 +1477,202 @@ header.elementor>.elementor-element {
 .loan-enquiry__form--main span.wpcf7-form-control-wrap {
     order: 2;
 }
+.page-id-2675 .news-slider__item .e-con.e-flex>.e-con-inner{
+  flex-wrap: unset;
+}
+.team__main--inner-title p,
+.team__main--inner-over--cont p {
+    display: -webkit-box;
+    -webkit-line-clamp: 13;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.elementor-1465 .elementor-element.elementor-element-9b418d8 .elementor-heading-title,
+.insights__main--box-cont--title h4,
+.transactions__title h4{
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.transactions__main--cont-data--value{
+  word-wrap: break-word;
+}
+.elementor-1465 .elementor-element.elementor-element-d58c954 > .elementor-widget-container{
+  margin-bottom: 0;
+}
+.elementor-2251 .elementor-element.elementor-element-c1bfb22 .elementor-heading-title {
+    word-wrap: break-word;
+  }
+.elementor-309 .elementor-element.elementor-element-e0561c8 > .elementor-widget-container p{
+   display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.insights__main--box-cont--content p,
+.elementor-1465 .elementor-element.elementor-element-d58c954 > .elementor-widget-container{
+  display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.team__main--inner-img img{
+  object-fit: cover;
+  object-position: top;
+}
+.elementor-1465 .elementor-element.elementor-element-d58c954 > .elementor-widget-container{
+  margin-bottom: 0 !important;
+}
+.e-con .article .elementor-widget.elementor-widget {
+    margin-top: 10px;
+}
+.transaction__shortcode .transactions__main--cont-data--value {width: 200px;}
+.transactions__main--cont-data--value{
+  width: 40%;
+  width: 100%;
+}
+.transactions__main--cont-data--title{
+  width: 60%;
+}
+
+.transaction .elementor-element.elementor-element-766434f.e-con-full.home-branch__main {
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media (max-width: 1440px) and (min-width: 768px) {
+    .elementor-page-2251 .elementor-2251 .elementor-element.elementor-element-2fc7b73 {
+        --width: 68%;
+    }
+    .elementor-page-2251 .elementor-2251 .elementor-element.elementor-element-db72d8c {
+        --width: 28%;
+    }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+    .elementor-page-2251 .elementor-2251 .elementor-element.elementor-element-2fc7b73 {
+        --width: 100%;
+    }
+    .elementor-page-2251 .elementor-2251 .elementor-element.elementor-element-db72d8c {
+        --width: 100%;
+    }
+}
+
+@media (max-width: 1340px){
+  .elementor-2675 .elementor-element.elementor-element-b04055c .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-95fd740 .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-6869ab3 .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-0382922 .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-b5516bf .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-fcaf9da .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-c1bfb22 .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-d95ef60 .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-96290b8 .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-d54042d .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-944641b .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-93afd58 .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-5a4bd1d .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-f762509 .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-76cf632a .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-1b7559d7 .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-ab80bd .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-4bd9add .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-62393193 .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-66a11e48 .elementor-heading-title {
+      font-size: 35px;
+      line-height: 20px;
+  }
+  .elementor-2675 .elementor-element.elementor-element-c8857f9,
+  .elementor-2675 .elementor-element.elementor-element-b8cf132,
+  .elementor-2675 .elementor-element.elementor-element-4ef6a754.e-con,
+  .elementor-2675 .elementor-element.elementor-element-5fb81a9d{
+    width: fit-content;
+  }
+  .elementor-2251 .elementor-element.elementor-element-694b2dd .elementor-heading-title{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  .elementor-2675 .elementor-element.elementor-element-f762509 > .elementor-widget-container{
+    padding-bottom: 0;
+  }
+  .elementor-2675 .elementor-element.elementor-element-652936a .elementor-heading-title,
+  .elementor-2675 .elementor-element.elementor-element-2273f5a .elementor-heading-title,
+  .elementor-2675 .elementor-element.elementor-element-0fe8b86 .elementor-heading-title,
+  .elementor-2251 .elementor-element.elementor-element-84d7c36 .elementor-heading-title,
+  .elementor-2251 .elementor-element.elementor-element-6f73610 .elementor-heading-title,
+  .elementor-2251 .elementor-element.elementor-element-54718ce .elementor-heading-title{
+      margin-top: 10px;
+  }
+  .elementor-2675 .elementor-element.elementor-element-fcaf9da > .elementor-widget-container,
+  .elementor-2675 .elementor-element.elementor-element-b04055c > .elementor-widget-container,
+  .elementor-2675 .elementor-element.elementor-element-95fd740 > .elementor-widget-container,
+  .elementor-2675 .elementor-element.elementor-element-b5516bf > .elementor-widget-container,
+  .elementor-2675 .elementor-element.elementor-element-76cf632a > .elementor-widget-container{
+    margin: 0;
+  }
+  .elementor-2675 .elementor-counter-number-wrapper {
+    max-width: 90px;
+    min-width: 30px;
+  }
+  .elementor-2675 .elementor-element.elementor-element-fcaf9da.elementor-element,
+  .elementor-2675 .elementor-element.elementor-element-394aab8.e-con{
+    width: fit-content;
+  }
+  .elementor-counter .elementor-counter-number {
+    max-width: 90px;
+    min-width: 30px;
+  }
+  .elementor-2675 .elementor-element.elementor-element-4ef6a754.e-con .elementor-counter .elementor-counter-number{
+    max-width: 90px;
+    min-width: 70px;
+  }
+  .elementor-page-2675 .elementor-counter .elementor-counter-number-suffix{
+    flex-grow: unset;
+  }
+  .elementor-2675 .elementor-element.elementor-element-6adf3040 .e-con-inner,
+  .elementor-2675 .elementor-element.elementor-element-2386d6c1 .e-con-inner,
+  .elementor-2675 .elementor-element.elementor-element-4bdb776a .e-con-inner,
+  .elementor-2675 .elementor-element.elementor-element-5c0bde2c .e-con-inner,
+  .elementor-2675 .elementor-element.elementor-element-87cce88 .e-con-inner,
+  .elementor-2675 .elementor-element.elementor-element-70e49854 .e-con-inner{
+    justify-content: center;
+  }
+  .elementor-2675 .elementor-element.elementor-element-1b0e4e80 .elementor-heading-title, .elementor-2675 .elementor-element.elementor-element-4f06c808 .elementor-heading-title, .elementor-2675 .elementor-element.elementor-element-33ebb238 .elementor-heading-title, .elementor-2675 .elementor-element.elementor-element-4f06c808 .elementor-heading-title {
+        font-size: 19px;
+        margin-top: 7px;
+    }
+}
+
+@media (max-width: 1024px){
+  .elementor-2675 .elementor-element.elementor-element-1b0e4e80 .elementor-heading-title,
+  .elementor-2675 .elementor-element.elementor-element-4f06c808 .elementor-heading-title,
+  .elementor-2675 .elementor-element.elementor-element-33ebb238 .elementor-heading-title,
+  .elementor-2675 .elementor-element.elementor-element-4f06c808 .elementor-heading-title{
+    font-size: 18px;
+    margin-top: 7px;
+  }
+}
+
+@media (max-width: 991px){
+  .elementor-page-2675 .elementor-2675 .elementor-element.elementor-element-e502f20{
+    flex-wrap: nowrap;
+  }
+  .elementor-2251 .elementor-element.elementor-element-bec8dbf{
+    --e-con-grid-template-columns: repeat(3, 1fr);
+    --e-con-grid-template-rows: repeat(1, 1fr);
+  }
+  .elementor-2675 .elementor-element.elementor-element-fb6b912,
+  .elementor.elementor-2675 .e-con.e-flex>.e-con-inner{
+    justify-content: center;
+  }
+  
+}
 
 @media (max-width: 768px){
   .elementor-2251 .elementor-element.elementor-element-bb8a7a9 {
@@ -1324,6 +1680,22 @@ header.elementor>.elementor-element {
       --margin-bottom: 100px;
       --margin-left: 0px;
       --margin-right: 0px;
+  }
+  .home-branch__main--inner .transactions__main--cont-data--title{
+    text-align: center;
+  }
+
+  .elementor-2251 .elementor-element.elementor-element-bec8dbf {
+      --e-con-grid-template-columns: repeat(1, 1fr);
+      --gap: 20px 20px;
+      --grid-auto-flow: row;
+      justify-content: center;
+  }
+  .elementor-page-2675 .elementor-2675 .elementor-element.elementor-element-e502f20{
+    flex-wrap: wrap;
+  }
+  .elementor-309 .elementor-element.elementor-element-3d713c2 .elementor-heading-title{
+    padding: 0 10px;
   }
   .elementor-2251 .elementor-element.elementor-element-2a45294.elementor-element{
     width: 100%;
@@ -1352,13 +1724,162 @@ header.elementor>.elementor-element {
   .insights__main--box-img {
     width: 100% !important;
     min-height: auto !important;
-    height: auto !important;
+    height: 250px !important;
+    max-width: 100% !important;
+  }
+  .insights__main--box-img img {
+    min-height: 250px !important;
+  }
+  .elementor-2251 .elementor-element.elementor-element-ab01a91{
+    padding: 0 15px;
+    border-radius: 20px;
+  }
+  .elementor-2204 .elementor-element.elementor-element-e62a2da .elementor-widget-container {
+      font-size: 16px;
+      line-height: 24px;
+  }
+  .elementor-2204 .elementor-element.elementor-element-979d2cf p {
+    font-size: 16px;
+  }
+    .elementor-2675 .elementor-element.elementor-element-b04055c .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-95fd740 .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-6869ab3 .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-0382922 .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-b5516bf .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-fcaf9da .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-c1bfb22 .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-d95ef60 .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-96290b8 .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-d54042d .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-944641b .elementor-heading-title,
+    .elementor-2251 .elementor-element.elementor-element-93afd58 .elementor-heading-title,
+    .elementor-kit-2655 .elementor-2675 .elementor-element.elementor-element-5a4bd1d .elementor-counter-number-wrapper,
+    .elementor-kit-2655 .elementor-2675 .elementor-element.elementor-element-f762509 .elementor-heading-title {
+      font-size: 24px;
+      line-height: 30px;
+  }
+    .elementor-kit-2655 .elementor-2675 .elementor-element.elementor-element-76cf632a .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-4bd9add .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-ab80bd .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-62393193 .elementor-counter-number-wrapper,
+    .elementor-2675 .elementor-element.elementor-element-66a11e48 .elementor-heading-title,
+    .elementor-2675 .elementor-element.elementor-element-1b7559d7 .elementor-heading-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+  .elementor-2675 .elementor-element.elementor-element-c8857f9,
+  .elementor-2675 .elementor-element.elementor-element-b8cf132,
+  .elementor-2675 .elementor-element.elementor-element-394aab8.e-con{
+    width: fit-content;
+  }
+  .elementor-2675 .elementor-element.elementor-element-0b0df14,
+  .elementor-2675 .elementor-element.elementor-element-ca4d5f7.e-con,
+  .elementor-2675 .elementor-element.elementor-element-5dc5563{
+    width: 100%;
+  }
+  .elementor-2675 .elementor-element.elementor-element-4ef6a754.e-con .elementor-counter .elementor-counter-number {
+      max-width: 90px;
+      min-width: 40px;
+  }
+  .elementor-2675 .elementor-element.elementor-element-1b7559d7.elementor-element{
+    width: fit-content;
+  }
+  .elementor-2675 .elementor-element.elementor-element-f762509 > .elementor-widget-container{
+    padding-bottom: 0;
+  }
+  .elementor.elementor-2675 .e-con.e-flex>.e-con-inner,
+  .elementor-2675 .elementor-element.elementor-element-fb6b912,
+  .elementor-2251 .elementor-element.elementor-element-c477d19.e-con,
+  .home-branch__main--inner .transactions__main--cont-data--value,
+  .elementor-page-2251 .status-publish .elementor-element-7a01643 .e-con.e-flex>.e-con-inner {
+    justify-content: center;
+  }
+  .elementor-2675 .elementor-element.elementor-element-fd99c72 .elementor-heading-title{
+    padding: 0 15px;
+  }
+  .elementor-2204 .elementor-element.elementor-element-d570d5d .elementor-heading-title{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .testimonial__main.owl-carousel .owl-item .testimonial__main--item-top-cont img{
+    object-fit: cover;
+  }
+  .elementor-1347 .elementor-element.elementor-element-39b2735 .elementor-heading-title{
+    font-size: 40px;
+  }
+  .elementor-1465 .elementor-element.elementor-element-9b418d8 .elementor-heading-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .elementor-kit-2655 h2{
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 38px;
+  }
+  .elementor-2675 .elementor-element.elementor-element-b04055c .elementor-counter-number-wrapper{
+    justify-content: center;
+            min-width: 60px;
+  }
+  .elementor-page-2675 .elementor-counter .elementor-counter-number-suffix,
+  .elementor-page-2675 .elementor-counter .elementor-counter-number-prefix,
+  .elementor-counter .elementor-counter-number-suffix{
+    flex-grow: unset;
+  }
+  .elementor-counter .elementor-counter-number {
+      max-width: 80px;
+      min-width: 30px;
+  }
+  .elementor-element-df8b77e {
+    padding: 0px 20px;
+  }
 }
+@media (max-width: 640px) {
+  .elementor-2251 .elementor-element.elementor-element-694b2dd .elementor-heading-title {
+      font-size: 24px;
+      line-height: 30px;
+  }
+  .transactions__main {
+      flex: 1;
+  }
+  .transactions__main--cont-data--title {
+    max-width: 80px;
+  }
+  .transactions__main--cont-data--value {
+    max-width: 100%;
+    flex: 1;
+    min-width: fit-content;
+  }
 }
-
 @media (max-width: 575px){
 
   .insights__main--box-img img{
-    min-height: auto;
+    min-height: 250px;
   }
+  .loan-enquiry__form form .loan-enquiry__form--main,
+  .elementor-kit-2655 h3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .loan-enquiry__form form .loan-enquiry__form--main.form-textarea .wpcf7-character-count {
+    right: 35px;
+  }
+}
+.elementor-element-16f5f82 {
+  background-color: transparent !important;
+}
+.loan-enquiry__form form .loan-enquiry__form--main input[type="date"]::-webkit-calendar-picker-indicator {
+  display: block;
+  background: url('https://cohort.demoproject.info/wp-content/uploads/2024/07/date-icon.png') no-repeat;
+  width: 20px;
+  height: 20px;
+}
+/* .elementor-246 .elementor-element.elementor-element-b7a8266 {
+  margin-bottom: 200px;
+} */
+.elementor-246 .elementor-element.elementor-element-17d1f2f .e-con-inner {
+  padding-bottom: 135px;
 }
