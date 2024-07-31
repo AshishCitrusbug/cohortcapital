@@ -802,8 +802,9 @@ span.wpcf7-not-valid-tip {
   border-bottom: 1px solid #fff;
   display: flex;
   align-items: start;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 0 62px;
+  gap: 45px;
 }
 .home-branch__main--inner .transactions__main--cont-data--title {
   max-width: 100%;
@@ -811,9 +812,9 @@ span.wpcf7-not-valid-tip {
   font-size: 21px;
   font-weight: 400;
   line-height: 28px;
-  text-align: left;
+  text-align: center;
 }
-.home-branch__main--inner  .transactions__main--cont-data--value {
+.home-branch__main--inner .transactions__main--cont-data--value {
   max-width: 100%;
   font-size: 40px;
   line-height: 72px;
@@ -821,6 +822,7 @@ span.wpcf7-not-valid-tip {
   font-family: 'New Atten Round';
   display: flex;
   align-items: center;
+  justify-content : center;
 }
 .home-branch__main--inner .transactions__main--cont-data {
   flex-direction: column-reverse;
@@ -1283,8 +1285,8 @@ header.elementor>.elementor-element {
     margin: 0 0 31px;
   }
   .home-branch__main--inner .transactions__main--cont-data--value {
-    font-size: 32px;
-    line-height: 52px;
+    font-size: 30px;
+    line-height: 40px;
   }
   .home-branch__main--inner .transactions__title h4 {
     font-size: 22px;
@@ -1351,10 +1353,15 @@ header.elementor>.elementor-element {
   }
   .home-branch__main--inner .transactions__main--cont-data--title {
     text-align: center;
+    font-size: 18px !important;
+    line-height: 24px !important;
   }
   .home-branch__main--inner .transactions__main--cont {
-    display: block;
+    /* display: block; */
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
   }
   .team__main--inner {
     max-width: 100%;
@@ -1537,7 +1544,7 @@ header.elementor>.elementor-element {
   width: 100%;
 }
 .transactions__main--cont-data--title{
-  width: 60%;
+  width: 100%;
 }
 
 .transaction .elementor-element.elementor-element-766434f.e-con-full.home-branch__main {
