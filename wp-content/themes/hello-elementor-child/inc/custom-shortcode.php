@@ -87,19 +87,19 @@ function transactions_field_loop()
             <?php if (!empty($loan)) { ?>
             <div class="transactions__main--cont-data">
                 <span class="transactions__main--cont-data--title">Loan</span>
-                <span class="transactions__main--cont-data--value"><?php echo $loan_num; ?> <span><?php echo $loan; ?></span></span>
+                <span class="transactions__main--cont-data--value"><span class="transactions-counter"><?php echo $loan_num; ?></span> <span><?php echo $loan; ?></span></span>
             </div>
             <?php }; ?>
-            <?php if (!empty($term_outstanding)) { ?>
+            <?php if ((!empty($term_outstanding)) || (!empty($term_outstanding_num))) { ?>
             <div class="transactions__main--cont-data">
-                <span class="transactions__main--cont-data--title">Term</span>
-                <span class="transactions__main--cont-data--value"><?php echo $term_outstanding_num; ?><span><?php echo $term_outstanding; ?></span></span>
+                <span class="transactions__main--cont-data--title">Term/months</span>
+                <span class="transactions__main--cont-data--value"><span class="transactions-counter"><?php echo $term_outstanding_num; ?></span><span><?php echo $term_outstanding; ?></span></span>
             </div>
             <?php } ?>
             <?php if (!empty($ltv)) { ?>
             <div class="transactions__main--cont-data">
                 <span class="transactions__main--cont-data--title">LTV</span>
-                <span class="transactions__main--cont-data--value"><?php echo $ltv_num; ?><span><?php echo $ltv; ?></span></span>
+                <span class="transactions__main--cont-data--value"><span class="transactions-counter"><?php echo $ltv_num; ?></span><span><?php echo $ltv; ?></span></span>
             </div>
             <?php } ?>
         </div>
@@ -318,7 +318,7 @@ function insights_article_search($atts)
         while ($insights_query->have_posts()) : $insights_query->the_post();    
     
         $insights_output .= '<div class="insights__main--box">
-                <div class="insights__main--box-img" style = "max-width:460px; height: 350px" >
+                <div class="insights__main--box-img" style = "max-width:467px; height: 326px" >
                     <img src="' . get_the_post_thumbnail_url() . '" alt="">
                 </div>
                 <div class="insights__main--box-cont">
